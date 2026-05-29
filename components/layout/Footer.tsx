@@ -11,24 +11,26 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.2fr_1fr_1.1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-bold text-slate-950">
-                Bankruptcy Control
-              </div>
+  <div className="flex items-center gap-3">
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-base font-bold text-slate-950 shadow-sm">
+      BC
+    </div>
 
-              <div>
-                <p className="text-sm font-semibold">Bankruptcy Control</p>
-                <p className="text-xs text-slate-400">
-                  Creditor-side case management
-                </p>
-              </div>
-            </div>
+    <div className="min-w-0">
+      <p className="text-base font-semibold text-white">
+        Bankruptcy Control
+      </p>
+      <p className="text-sm text-slate-400">
+        Creditor-side case management
+      </p>
+    </div>
+  </div>
 
-            <p className="mt-5 max-w-sm text-sm leading-6 text-slate-300">
-              Creditor-side bankruptcy case management software for lenders,
-              creditors, and creditor-side firms.
-            </p>
-          </div>
+  <p className="mt-6 max-w-sm text-base leading-7 text-slate-300">
+    Creditor-side bankruptcy case management software for lenders,
+    creditors, and creditor-side firms.
+  </p>
+</div>
 
           <FooterColumn title="Platform" links={footerNavigation.platform} />
           <FooterColumn title="Industries" links={footerNavigation.industries} />

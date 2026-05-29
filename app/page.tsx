@@ -17,7 +17,7 @@ export default function Home() {
       <Section
         eyebrow="Problem / Solution"
         title="Monitoring is only the beginning."
-        description="Bankruptcy alerts and court notices tell your team that something happened. BC helps organize the response: case tracking, tasks, notices, documents, reporting, deadlines, and internal accountability."
+        description="Bankruptcy alerts and court notices tell your team that something happened. Bankruptcy Control helps organize the response: case tracking, tasks, notices, documents, reporting, deadlines, and internal accountability."
       >
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className="rounded-3xl border border-blue-200 bg-blue-50 p-8 shadow-sm dark:border-blue-500/30 dark:bg-blue-500/10">
             <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-              What BC helps manage
+              What Bankruptcy Control helps manage
             </h3>
 
             <ul className="mt-6 space-y-4 text-slate-700 dark:text-slate-300">
@@ -49,9 +49,9 @@ export default function Home() {
 
       <Section
         className="bg-slate-50 dark:bg-slate-950"
-        eyebrow="Who BC Serves"
+        eyebrow="Who Bankruptcy Control Serves"
         title="Built for Creditor-Side Bankruptcy Operations"
-        description="BC supports creditor-side teams across lending, finance, and legal operations. Common users include:"
+        description="Bankruptcy Control supports creditor-side teams across lending, finance, and legal operations. Common users include:"
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {industries.slice(0, 8).map((industry) => (
@@ -94,9 +94,9 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-300">
-              BC is designed with secure hosting, access controls, auditability,
+              Bankruptcy Control is designed with secure hosting, access controls, auditability,
               and data-protection practices appropriate for creditor-side
-              bankruptcy operations. BC supports client compliance efforts but
+              bankruptcy operations. Bankruptcy Control supports client compliance efforts but
               does not replace each client’s own legal, regulatory, and internal
               security obligations.
             </p>
@@ -123,9 +123,9 @@ export default function Home() {
       </Section>
 
       <Section
-        eyebrow="Why BC"
+        eyebrow="Why Bankruptcy Control"
         title="Built from real bankruptcy workflow experience."
-        description="BC began as an operational bankruptcy case management system used in real creditor-side workflows. The platform is being modernized into a secure, cloud-capable product while preserving the business logic and practical workflow experience developed over years of use."
+        description="Bankruptcy Control began as an operational bankruptcy case management system used in real creditor-side workflows. The platform is being modernized into a secure, cloud-capable product while preserving the business logic and practical workflow experience developed over years of use."
       >
         <div className="grid gap-5 md:grid-cols-4">
           {[
@@ -153,12 +153,12 @@ export default function Home() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            See BC in a private demo.
+            See Bankruptcy Control in a private demo.
           </h2>
 
           <p className="mt-5 text-base leading-7 text-slate-700 dark:text-slate-300">
             We will tailor the demo to your workflow and use sanitized sample
-            data to show how BC helps teams manage bankruptcy cases from
+            data to show how Bankruptcy Control helps teams manage bankruptcy cases from
             detection through resolution.
           </p>
 
