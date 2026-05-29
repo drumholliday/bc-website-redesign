@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-bold text-slate-950">
-                BC
+                Bankruptcy Control
               </div>
 
               <div>

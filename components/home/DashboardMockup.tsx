@@ -34,7 +34,7 @@ export function DashboardMockup() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
-                BC Workspace
+                Operational Workspace
               </p>
               <h3 className="mt-1 text-lg font-semibold text-slate-950 dark:text-white">
                 Bankruptcy Operations Dashboard
