@@ -55,11 +55,8 @@ export function Navbar() {
           })}
         </div>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/contact" variant="ghost" className="text-white hover:bg-white/10">
-            Contact
-          </Button>
-          <Button href="/contact">Request a Demo</Button>
+       <div className="hidden items-center gap-3 lg:flex">
+        <Button href="/contact">Request a Demo</Button>
         </div>
 
         <button
@@ -97,11 +94,8 @@ export function Navbar() {
               );
             })}
 
-            <div className="mt-4 grid gap-3">
-              <Button href="/contact" variant="secondary">
-                Contact
-              </Button>
-              <Button href="/contact">Request a Demo</Button>
+           <div className="mt-4 grid gap-3">
+            <Button href="/contact">Request a Demo</Button>
             </div>
           </div>
         </div>

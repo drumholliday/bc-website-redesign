@@ -58,10 +58,9 @@ export const footerNavigation = {
     },
   ],
   company: [
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Request Demo", href: "/contact" },
-    { label: "Privacy", href: "/privacy" },
-    { label: "Disclaimer", href: "/disclaimer" },
-  ],
+  { label: "About", href: "/about" },
+  { label: "Contact / Demo", href: "/contact" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Disclaimer", href: "/disclaimer" },
+],
 };
