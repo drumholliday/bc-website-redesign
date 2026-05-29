@@ -1,4 +1,10 @@
+// Main navigation links used by the desktop and mobile navbar.
+// Keeping these links in one file makes it easier to update navigation later.
 export const mainNavigation = [
+  {
+    label: "Home",
+    href: "/",
+  },
   {
     label: "Platform",
     href: "/platform",
@@ -25,6 +31,8 @@ export const mainNavigation = [
   },
 ];
 
+// Footer navigation is grouped by column so the Footer component
+// can stay clean and focus on layout instead of storing link data.
 export const footerNavigation = {
   platform: [
     { label: "Overview", href: "/platform" },
