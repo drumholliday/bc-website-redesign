@@ -16,8 +16,8 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    // Fixed the navbar text color issues on some browsers not visable on pc's using edge or chrome browseers
-    // replaced bg-slate-950/95 backdrop-blur-xl with bg-[#020617] to resolve that. 
+    // Fixed navbar contrast issues seen on some PC browsers by using explicit high-contrast colors.
+    // Replaced transparent/blurred background styling with a solid dark background.
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#020617] shadow-sm">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-3" aria-label="Home">
@@ -48,11 +48,10 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-full px-3 py-2 text-base font-medium transition-all duration-200",
-                  // Use explicit high-contrast colors for better readability across PC browsers.
+                  "rounded-full px-3 py-2 text-base font-semibold transition-all duration-200",
                   isActive
-                    ? "bg-white/[0.12] text-white"
-                    : "text-slate-100 hover:bg-white/[0.12] hover:text-white"
+                    ? "bg-[#1E3A8A] text-[#FFFFFF]"
+                    : "text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#FFFFFF]",
                 )}
               >
                 {item.label}
@@ -67,7 +66,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600 text-white transition hover:bg-white/12 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600 text-white transition hover:bg-white/[0.12] lg:hidden"
           onClick={() => setIsOpen((current) => !current)}
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
@@ -92,10 +91,10 @@ export function Navbar() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "rounded-2xl px-4 py-3 text-base font-medium transition-all duration-200",
+                    "rounded-2xl px-4 py-3 text-base font-semibold transition-all duration-200",
                     isActive
-                      ? "bg-white/12 text-white"
-                      : "text-slate-100 hover:bg-white/12 hover:text-white"
+                      ? "bg-[#1E3A8A] text-[#FFFFFF]"
+                      : "text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#FFFFFF]",
                   )}
                 >
                   {item.label}
