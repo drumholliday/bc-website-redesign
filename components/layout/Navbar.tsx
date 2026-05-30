@@ -29,7 +29,7 @@ export function Navbar() {
             <p className="text-base font-semibold tracking-tight text-white">
               Bankruptcy Control
             </p>
-            
+
             {/* REMOCVED BELOW FOR NOW */}
             {/* <p className="text-sm text-slate-200">
               Creditor-side case management
@@ -49,11 +49,14 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
+                style={{
+                  color: "#ffffff",
+                  WebkitFontSmoothing: "antialiased",
+                  MozOsxFontSmoothing: "grayscale",
+                }}
                 className={cn(
-                  "rounded-full px-3 py-2 text-base font-semibold transition-all duration-200",
-                  isActive
-                    ? "bg-[#1E3A8A] text-[#FFFFFF]"
-                    : "text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#FFFFFF]",
+                  "rounded-full px-3 py-2 text-base font-bold transition-all duration-200 hover:bg-[#1E3A8A] hover:underline hover:underline-offset-4",
+                  isActive && "bg-[#1E3A8A]",
                 )}
               >
                 {item.label}
@@ -68,7 +71,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600 text-white transition hover:bg-white/[0.12] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white text-white transition hover:bg-[#1E3A8A] lg:hidden"
           onClick={() => setIsOpen((current) => !current)}
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
@@ -92,11 +95,14 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
+                  style={{
+                    color: "#ffffff",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                  }}
                   className={cn(
-                    "rounded-2xl px-4 py-3 text-base font-semibold transition-all duration-200",
-                    isActive
-                      ? "bg-[#1E3A8A] text-[#FFFFFF]"
-                      : "text-[#F8FAFC] hover:bg-[#1E293B] hover:text-[#FFFFFF]",
+                    "rounded-2xl px-4 py-3 text-base font-bold transition-all duration-200 hover:bg-[#1E3A8A] hover:underline hover:underline-offset-4",
+                    isActive && "bg-[#1E3A8A]",
                   )}
                 >
                   {item.label}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { DashboardMockup } from "@/components/home/DashboardMockup";
 
-
 /*
   Homepage hero section.
   The message is intentionally direct: monitoring detects the event,
@@ -10,22 +9,25 @@ import { DashboardMockup } from "@/components/home/DashboardMockup";
 */
 export function Hero() {
   return (
-    <section className="overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-14 sm:py-16 lg:py-20">
+   <section className="overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 pt-10 pb-16 sm:pt-12 sm:pb-20 lg:pt-14 lg:pb-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
         <div>
-          <div className="mb-8 flex">
-          <Image
-            src="/bc-logo-white.png"
-            alt="Bankruptcy Control logo"
-            width={380}
-            height={120}
-            className="h-auto w-full max-w-[380px]"
-            priority
-          />
-        </div>
-          
+        <div className="mb-5 ml-8 max-w-[200px] -translate-y-6 sm:max-w-[240px] lg:ml-12 lg:max-w-[280px]">
+            <Image
+              src="/bc-logo-black-2.png"
+              alt="Bankruptcy Control logo"
+              width={1400}
+              height={400}
+              priority
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
-            From monitoring to case resolutions
+            From monitoring to case resolution
           </p>
 
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
@@ -50,8 +52,8 @@ export function Hero() {
           {/* Rewrote the planning notes here */}
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             Bankruptcy Control helps creditors, lenders, and creditor-side firms
-            monitor bankruptcy activity and manage cases, notices, documents, tasks,
-            reporting, and internal workflows in one secure platform.
+            monitor bankruptcy activity and manage cases, notices, documents,
+            tasks, reporting, and internal workflows in one secure platform.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
