@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { DashboardMockup } from "@/components/home/DashboardMockup";
+
 
 /*
   Homepage hero section.
@@ -8,15 +10,26 @@ import { DashboardMockup } from "@/components/home/DashboardMockup";
 */
 export function Hero() {
   return (
-    <section className="overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24 lg:py-28">
+    <section className="overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-14 sm:py-16 lg:py-20">
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
         <div>
+          <div className="mb-8 flex">
+          <Image
+            src="/bc-logo-white.png"
+            alt="Bankruptcy Control logo"
+            width={380}
+            height={120}
+            className="h-auto w-full max-w-[380px]"
+            priority
+          />
+        </div>
+          
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
-            Creditor-side bankruptcy operations
+            From monitoring to case resolutions
           </p>
 
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-            Creditor-Side Bankruptcy Case Management Software
+            Bankruptcy Case Management Software for Creditor-Side Operations
           </h1>
 
           <div className="mt-7 max-w-2xl rounded-3xl border border-blue-200 bg-blue-50/80 p-5 shadow-sm">
@@ -28,10 +41,17 @@ export function Hero() {
             </p>
           </div>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          {/* <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             Bankruptcy Control helps creditors, lenders, and creditor-side law
             firms manage bankruptcy cases, notices, documents, tasks, reporting,
             and internal workflows in one secure platform.
+          </p> */}
+
+          {/* Rewrote the planning notes here */}
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Bankruptcy Control helps creditors, lenders, and creditor-side firms
+            monitor bankruptcy activity and manage cases, notices, documents, tasks,
+            reporting, and internal workflows in one secure platform.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">

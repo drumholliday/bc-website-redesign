@@ -29,9 +29,11 @@ export function Navbar() {
             <p className="text-base font-semibold tracking-tight text-white">
               Bankruptcy Control
             </p>
-            <p className="text-sm text-slate-200">
+            
+            {/* REMOCVED BELOW FOR NOW */}
+            {/* <p className="text-sm text-slate-200">
               Creditor-side case management
-            </p>
+            </p> */}
           </div>
         </Link>
 

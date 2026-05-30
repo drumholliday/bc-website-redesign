@@ -17,12 +17,12 @@ export default function Home() {
       <Section
         eyebrow="Problem / Solution"
         title="Monitoring is only the beginning."
-        description="Bankruptcy alerts and court notices tell your team that something happened. Bankruptcy Control helps organize the response: case tracking, tasks, notices, documents, reporting, deadlines, and internal accountability."
+        description="Bankruptcy Control helps teams monitor bankruptcy activity, receive notices, and manage the operational response that follows: case tracking, tasks, documents, reporting, deadlines, and internal accountability."
       >
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-              What monitoring tells you
+              What monitoring helps identify
             </h3>
 
             <ul className="mt-6 space-y-4 text-slate-600 dark:text-slate-300">
@@ -94,11 +94,11 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-300">
-              Bankruptcy Control is designed with secure hosting, access controls, auditability,
-              and data-protection practices appropriate for creditor-side
-              bankruptcy operations. Bankruptcy Control supports client compliance efforts but
-              does not replace each client’s own legal, regulatory, and internal
-              security obligations.
+              Bankruptcy Control is designed with secure hosting, access
+              controls, auditability, and data-protection practices appropriate
+              for creditor-side bankruptcy operations. Bankruptcy Control
+              supports client compliance efforts but does not replace each
+              client’s own legal, regulatory, and internal security obligations.
             </p>
           </div>
 
@@ -158,8 +158,8 @@ export default function Home() {
 
           <p className="mt-5 text-base leading-7 text-slate-700 dark:text-slate-300">
             We will tailor the demo to your workflow and use sanitized sample
-            data to show how Bankruptcy Control helps teams manage bankruptcy cases from
-            detection through resolution.
+            data to show how Bankruptcy Control helps teams manage bankruptcy
+            cases from detection through resolution.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
