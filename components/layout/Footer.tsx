@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-slate-950 px-6 py-16 text-white">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.2fr_1fr_1.1fr]">
+       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.7fr_0.85fr_0.85fr_1.1fr]">
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-base font-bold text-slate-950 shadow-sm">
@@ -32,12 +32,8 @@ export function Footer() {
             </p>
           </div>
 
-          <FooterColumn title="Platform" links={footerNavigation.platform} />
-          <FooterColumn
-            title="Industries"
-            links={footerNavigation.industries}
-          />
-          <FooterColumn title="Company" links={footerNavigation.company} />
+         <FooterColumn title="Product" links={footerNavigation.product} />
+         <FooterColumn title="Company" links={footerNavigation.company} />
 
           <div>
             <h3 className="text-base font-semibold text-sky-300">

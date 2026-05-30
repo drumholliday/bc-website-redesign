@@ -33,34 +33,23 @@ export const mainNavigation = [
 
 // Footer navigation is grouped by column so the Footer component
 // can stay clean and focus on layout instead of storing link data.
+//
+// For the current version, keep the footer sitemap focused on real,
+// top-level pages. Deeper feature and industry links can be added later
+// if dedicated detail pages are built.
 export const footerNavigation = {
-  platform: [
-    { label: "Overview", href: "/platform" },
-    { label: "Case Management", href: "/platform/case-management" },
-    { label: "Court Notices", href: "/platform/court-notices" },
-    { label: "Reporting", href: "/platform/reporting-audit-trails" },
+  product: [
+    { label: "Platform", href: "/platform" },
+    { label: "Industries", href: "/industries" },
+    { label: "Integrations", href: "/integrations" },
     { label: "Security", href: "/security" },
-  ],
-  industries: [
-    { label: "Consumer Lenders", href: "/industries/consumer-lenders" },
-    { label: "Title / Auto Lenders", href: "/industries/title-auto-lenders" },
-    {
-      label: "Manufactured & Mobile Home Lenders",
-      href: "/industries/manufactured-mobile-home-lenders",
-    },
-    {
-      label: "Credit Unions & Regional Lenders",
-      href: "/industries/credit-unions-regional-lenders",
-    },
-    {
-      label: "Creditor-Side Law Firms",
-      href: "/industries/creditor-side-law-firms",
-    },
+    { label: "Deployment", href: "/deployment" },
   ],
   company: [
-  { label: "About", href: "/about" },
-  { label: "Contact / Demo", href: "/contact" },
-  { label: "Privacy", href: "/privacy" },
-  { label: "Disclaimer", href: "/disclaimer" },
-],
+    { label: "About", href: "/about" },
+    { label: "Contact / Demo", href: "/contact" },
+    { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
+    { label: "Disclaimer", href: "/disclaimer" },
+  ],
 };
