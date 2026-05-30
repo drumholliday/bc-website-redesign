@@ -15,12 +15,28 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  function handleHomeClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    if (pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      setIsOpen(false);
+    }
+  }
+
   return (
     // Fixed navbar contrast issues seen on some PC browsers by using explicit high-contrast colors.
     // Replaced transparent/blurred background styling with a solid dark background.
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#020617] shadow-sm">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-3" aria-label="Home">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          aria-label="Home"
+          onClick={handleHomeClick}
+        >
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-base font-bold text-slate-950 shadow-sm">
             BC
           </div>
@@ -47,20 +63,21 @@ export function Navbar() {
 
             return (
               <Link
-                key={item.href}
-                href={item.href}
-                style={{
-                  color: "#ffffff",
-                  WebkitFontSmoothing: "antialiased",
-                  MozOsxFontSmoothing: "grayscale",
-                }}
-                className={cn(
-                  "rounded-full px-3 py-2 text-base font-bold transition-all duration-200 hover:bg-[#1E3A8A] hover:underline hover:underline-offset-4",
-                  isActive && "bg-[#1E3A8A]",
-                )}
-              >
-                {item.label}
-              </Link>
+  key={item.href}
+  href={item.href}
+  onClick={item.href === "/" ? handleHomeClick : undefined}
+  style={{
+    color: "#ffffff",
+    WebkitFontSmoothing: "antialiased",
+    MozOsxFontSmoothing: "grayscale",
+  }}
+  className={cn(
+    "rounded-full px-3 py-2 text-base font-bold transition-all duration-200 hover:bg-[#1E3A8A] hover:underline hover:underline-offset-4",
+    isActive && "bg-[#1E3A8A]"
+  )}
+>
+  {item.label}
+</Link>
             );
           })}
         </div>
@@ -94,7 +111,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={item.href === "/" ? handleHomeClick : () => setIsOpen(false)}
                   style={{
                     color: "#ffffff",
                     WebkitFontSmoothing: "antialiased",
