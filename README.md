@@ -4,9 +4,11 @@ A modern marketing website for **Bankruptcy Control**, a creditor-side bankruptc
 
 The site is designed to present Bankruptcy Control as a polished, credible, and professional software platform for bankruptcy monitoring, case management, notice workflows, documents, tasks, reporting, deadlines, and internal operational control.
 
-## Live Site
+## Preview Site
 
-[View the live Bankruptcy Control website](https://bc-website-redesign.vercel.app/)
+<a href="https://bc-website-redesign.vercel.app/" target="_blank" rel="noopener noreferrer">
+  View the live Bankruptcy Control website
+</a>
 
 ## Overview
 
@@ -310,6 +312,8 @@ The goal of this website is to make a qualified lender, creditor, credit union, 
 
 > This company understands creditor-side bankruptcy operations, the software looks credible, and it is worth requesting a private demo.
 
-## Live Site
+## Preview Site
 
-[View the live Bankruptcy Control website](https://bc-website-redesign.vercel.app/)
+<a href="https://bc-website-redesign.vercel.app/" target="_blank" rel="noopener noreferrer">
+  View the live Bankruptcy Control website
+</a>
