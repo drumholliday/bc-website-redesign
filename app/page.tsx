@@ -91,7 +91,7 @@ export default function Home() {
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Designed for secure creditor-side operations.
+              Designed for secure operations.
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-300">
@@ -164,12 +164,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Button href="/contact">Request a Demo</Button>
+          <Button href="/contact">Request a Demo</Button>
 
-            <Button href="/platform" variant="secondary">
-              Explore Platform
-            </Button>
-          </div>
+          <Button href="/platform" variant="secondary">
+            Explore Platform
+          </Button>
+        </div>
         </div>
       </Section>
     </>

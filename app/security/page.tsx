@@ -79,7 +79,7 @@ export default function SecurityPage() {
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div>
               <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                Security and operational controls for bankruptcy workflows.
+                Security and operational controls for bankruptcy operations.
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
