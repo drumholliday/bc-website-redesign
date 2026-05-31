@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { industries } from "@/data/industries";
 import { platformFeatures } from "@/data/platformFeatures";
+import { Button } from "@/components/ui/Button";
 
 /*
   Homepage for Bankruptcy Control.
@@ -163,19 +164,11 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
-            >
-              Request a Demo
-            </a>
+            <Button href="/contact">Request a Demo</Button>
 
-            <a
-              href="/platform"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-blue-300 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:border-blue-500 dark:hover:bg-slate-800"
-            >
+            <Button href="/platform" variant="secondary">
               Explore Platform
-            </a>
+            </Button>
           </div>
         </div>
       </Section>
