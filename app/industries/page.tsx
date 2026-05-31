@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/Button";
 */
 const industries = [
   {
-    title: "Consumer Lenders",
+    title: "Consumer & Installment Lenders",
     description:
-      "Support bankruptcy monitoring, case management, notices, documents, task ownership, and reporting for consumer lending portfolios.",
+      "Support bankruptcy case workflows for consumer lending portfolios, internal teams, and servicing operations.",
     items: [
       "Portfolio bankruptcy activity visibility",
       "Case and notice tracking",
@@ -33,9 +33,9 @@ const industries = [
   {
     title: "Manufactured & Mobile Home Lenders",
     description:
-      "Provide bankruptcy workflow support for manufactured housing and mobile home lending operations with creditor-side case visibility.",
+      "Manage bankruptcy workflows for manufactured housing and mobile home lending operations.",
     items: [
-      "Creditor-side case tracking",
+      "Case tracking for manufactured housing portfolios",
       "Document and notice organization",
       "Operational accountability",
       "Reporting for internal review",
@@ -44,7 +44,7 @@ const industries = [
   {
     title: "Credit Unions & Regional Lenders",
     description:
-      "Give smaller and mid-sized lending teams a structured platform for managing bankruptcy exposure without replacing core systems.",
+      "Give smaller and mid-sized lending teams a structured way to manage bankruptcy cases without replacing core systems.",
     items: [
       "Bankruptcy workflow structure",
       "Internal team coordination",
@@ -55,7 +55,7 @@ const industries = [
   {
     title: "Secured Creditors",
     description:
-      "Help secured creditors organize case activity, documents, deadlines, collateral-related workflows, and reporting needs.",
+      "Organize case activity, collateral-related workflows, notices, deadlines, and internal accountability.",
     items: [
       "Case activity tracking",
       "Deadline visibility",
@@ -64,9 +64,20 @@ const industries = [
     ],
   },
   {
+    title: "Creditor-Side Law Firms",
+    description:
+      "Help legal, servicing, and operational teams that support creditors coordinate case details, documents, task status, and reporting visibility.",
+    items: [
+      "Case detail coordination",
+      "Document and deadline tracking",
+      "Client-facing reporting support",
+      "Workflow visibility",
+    ],
+  },
+  {
     title: "Specialty Finance Companies",
     description:
-      "Support bankruptcy workflows for specialty finance operations that need clearer case tracking, reporting, and task ownership.",
+      "Support portfolio-specific bankruptcy workflows with configurable case tracking and operational reporting.",
     items: [
       "Configurable workflow support",
       "Case and account organization",
@@ -75,18 +86,17 @@ const industries = [
     ],
   },
   {
-    title: "Creditor-Side Firms",
+    title: "Other Creditor-Side Teams",
     description:
-      "Help creditor-side firms coordinate case details, documents, tasks, client reporting, and workflow visibility.",
+      "Adapt bankruptcy case management workflows around the needs of teams working on behalf of creditors.",
     items: [
-      "Case detail coordination",
-      "Document and deadline tracking",
-      "Client-facing reporting support",
-      "Workflow visibility",
+      "Flexible workflow structure",
+      "Case and notice visibility",
+      "Task and document coordination",
+      "Operational accountability",
     ],
   },
 ];
-
 /*
   Industries page.
 
@@ -170,13 +180,13 @@ export default function IndustriesPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Bankruptcy Control is designed for teams that need better
+              Bankruptcy Control is designed for organizations that need better
               visibility, structure, and accountability around bankruptcy cases,
               notices, deadlines, documents, and reporting.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {industries.map((industry) => (
               <div
                 key={industry.title}

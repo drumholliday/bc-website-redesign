@@ -44,7 +44,7 @@ const platformSections = [
   {
     title: "Documents & Reporting",
     description:
-      "Organize case documents, reporting needs, operational notes, and management visibility across creditor-side bankruptcy workflows.",
+      "Organize case documents, reporting needs, operational notes, and management visibility across bankruptcy workflows.",
     items: [
       "Document organization",
       "Operational reporting",
@@ -84,9 +84,9 @@ export default function PlatformPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Bankruptcy Control helps creditor-side teams monitor bankruptcy
-                activity and manage the cases, notices, documents, tasks,
-                reporting, deadlines, and internal workflows that follow.
+               Bankruptcy Control helps creditors, lenders, and the firms that support them monitor 
+               bankruptcy activity and manage the cases, notices, documents, tasks, reporting, 
+               deadlines, and internal workflows that follow.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function PlatformPage() {
 
               This card reinforces the core distinction:
               Bankruptcy Control should not be presented as "just monitoring."
-              It helps creditor-side teams move from detection to action.
+              It helps organizations move from detection to action.
             */}
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 className="text-2xl font-semibold text-slate-950">
@@ -131,13 +131,13 @@ export default function PlatformPage() {
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              One workspace for creditor-side bankruptcy work.
+              One workspace for bankruptcy operations.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-600">
               The platform brings together monitoring activity, case
               information, notices, documents, task ownership, reporting, and
-              workflow visibility so bankruptcy teams can manage the process
+              workflow visibility so organizations can manage the process
               more consistently.
             </p>
           </div>

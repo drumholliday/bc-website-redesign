@@ -7,18 +7,34 @@ import { Button } from "@/components/ui/Button";
 
 /*
   Homepage for Bankruptcy Control.
-  This first version focuses on a clean, credible SaaS landing page
-  without overcrowding the user with every detail page at once.
+
+  This page is the marketing landing page. It should quickly explain:
+  - what problem Bankruptcy Control solves,
+  - who the product serves,
+  - what core features it offers,
+  - why the platform is credible,
+  - and how a prospect can request a private demo.
+
+  The navbar links go to separate overview pages such as Platform, Industries,
+  Security, Deployment, and About. Because of that, the homepage section labels
+  should feel like previews/selling points, not duplicate navbar destinations.
 */
 export default function Home() {
   return (
     <>
       <Hero />
 
+      {/* 
+        PROBLEM / SOLUTION SECTION
+
+        This section explains the main product positioning:
+        bankruptcy monitoring is useful, but Bankruptcy Control helps manage
+        the operational work that follows the alert or notice.
+      */}
       <Section
         eyebrow="Problem / Solution"
         title="Monitoring is only the beginning."
-        description="Bankruptcy Control helps teams monitor bankruptcy activity, receive notices, and manage the operational response that follows: case tracking, tasks, documents, reporting, deadlines, and internal accountability."
+        description="Bankruptcy Control helps teams monitor bankruptcy activity, receive notices, and manage the operational response that follows, including case tracking, tasks, documents, reporting, deadlines, and internal accountability."
       >
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
@@ -48,16 +64,29 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* 
+        AUDIENCE PREVIEW SECTION
+
+        This is a homepage preview of the industries/audiences Bankruptcy
+        Control can support. The navbar Industries link goes to the broader
+        Industries overview page, so this section is labeled "Who It Serves"
+        instead of "Industries" to avoid making it feel like a duplicate
+        navbar destination.
+
+        Important:
+        Since multiple cards may temporarily point to the same page, use
+        industry.title as the React key instead of industry.href.
+      */}
       <Section
         className="bg-slate-50 dark:bg-slate-950"
-        eyebrow="Who Bankruptcy Control Serves"
-        title="Built for Creditor-Side Bankruptcy Operations"
-        description="Bankruptcy Control supports creditor-side teams across lending, finance, and legal operations. Common users include:"
+        eyebrow="Who It Serves"
+        title="Built for creditors, lenders, and the firms that support them."
+        description="Bankruptcy Control supports organizations that manage bankruptcy activity, notices, documents, reporting, deadlines, and operational workflows from the creditor side of the process."
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {industries.slice(0, 8).map((industry) => (
             <Card
-              key={industry.href}
+              key={industry.title}
               title={industry.title}
               description={industry.description}
               href={industry.href}
@@ -66,10 +95,19 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* 
+        CORE FEATURES PREVIEW SECTION
+
+        This section previews the main product capabilities on the homepage.
+        It is intentionally labeled "Core Features" instead of "Platform"
+        because the navbar Platform link goes to a separate overview page.
+
+        The cards can eventually link to individual feature detail pages.
+      */}
       <Section
-        eyebrow="Platform"
-        title="Core Platform Features"
-        description="Visibility, workflow discipline, reporting, and operational control for creditor-side bankruptcy teams."
+        eyebrow="Core Features"
+        title="What Bankruptcy Control helps manage."
+        description="Visibility, workflow discipline, reporting, and operational control for bankruptcy case management from monitoring through resolution."
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {platformFeatures.map((feature) => (
@@ -83,22 +121,33 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* 
+        SECURE OPERATIONS PREVIEW SECTION
+
+        This section gives a short homepage preview of security, auditability,
+        hosting, backups, and administrative control.
+
+        The navbar has separate Security and Deployment pages, so the homepage
+        section is labeled "Secure Operations" instead of "Security & Deployment"
+        to avoid making users expect the navbar to scroll to this section.
+      */}
       <Section className="bg-slate-950 text-white dark:bg-black">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
-              Security & Deployment
+              Secure Operations
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Designed for secure operations.
+              Built with access control, auditability, and responsible
+              deployment planning in mind.
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-300">
-              Bankruptcy Control is designed with secure hosting, access
-              controls, auditability, and data-protection practices appropriate
-              for creditor-side bankruptcy operations. Bankruptcy Control
-              supports client compliance efforts but does not replace each
+              Bankruptcy Control is designed with secure hosting, role-based
+              access, auditability, backup planning, and data-protection
+              practices appropriate for bankruptcy operations. The platform can
+              support client compliance efforts, but it does not replace each
               client’s own legal, regulatory, and internal security obligations.
             </p>
           </div>
@@ -106,10 +155,10 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               "Role-Based Access",
-              "Audit Logging",
-              "Secure Cloud Hosting",
-              "Encrypted Data Storage",
-              "Backup and Restore Planning",
+              "Auditability & Activity History",
+              "Secure Hosting Approach",
+              "Data Protection Practices",
+              "Backup and Recovery Planning",
               "Controlled User Administration",
             ].map((item) => (
               <div
@@ -123,6 +172,13 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* 
+        CREDIBILITY SECTION
+
+        This section explains why Bankruptcy Control is not just a generic
+        software concept. It points to real workflow experience, modernization,
+        and creditor/lender focus.
+      */}
       <Section
         eyebrow="Why Bankruptcy Control"
         title="Built from real bankruptcy workflow experience."
@@ -147,6 +203,13 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* 
+        PRIVATE DEMO CTA
+
+        Final homepage call-to-action. This section sends qualified visitors
+        toward the Contact/Demo page and gives them a secondary path to the
+        Platform overview page.
+      */}
       <Section className="bg-blue-50 dark:bg-blue-500/10" centered>
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700 dark:text-blue-300">
@@ -164,12 +227,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <Button href="/contact">Request a Demo</Button>
+            <Button href="/contact">Request a Demo</Button>
 
-          <Button href="/platform" variant="secondary">
-            Explore Platform
-          </Button>
-        </div>
+            <Button href="/platform" variant="secondary">
+              Explore Platform
+            </Button>
+          </div>
         </div>
       </Section>
     </>

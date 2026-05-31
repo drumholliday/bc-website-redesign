@@ -33,7 +33,7 @@ const securityControls = [
   {
     title: "Secure Hosting Approach",
     description:
-      "Designed around secure hosting practices appropriate for creditor-side bankruptcy operations and sensitive workflow data.",
+      "Designed around secure hosting practices appropriate for bankruptcy operations and sensitive workflow data.",
     items: [
       "Cloud-capable architecture",
       "Controlled environment planning",
@@ -44,7 +44,7 @@ const securityControls = [
   {
     title: "Data Protection Practices",
     description:
-      "Support creditor-side data protection needs with careful access control, secure workflow design, and GLBA-aware safeguards.",
+      "Support data protection needs with careful access control, secure workflow design, and responsible safeguard planning.",
     items: [
       "GLBA-aware practices",
       "Sensitive data handling awareness",
@@ -84,8 +84,16 @@ export default function SecurityPage() {
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 Bankruptcy Control is designed with secure hosting, role-based
-                access, auditability, and GLBA-aware data protection practices
-                appropriate for creditor-side bankruptcy operations.
+                access, auditability, backup planning, and{" "}
+                <a
+                  href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
+                >
+                  GLBA-aware
+                </a>{" "}
+                data protection practices appropriate for bankruptcy operations.
               </p>
             </div>
 
@@ -105,6 +113,20 @@ export default function SecurityPage() {
                 efforts, but each client remains responsible for its own legal,
                 regulatory, employee access, endpoint security, internal policy,
                 and lawful-use obligations.
+              </p>
+
+              <p className="mt-4 text-base leading-7 text-slate-600">
+                For background on financial privacy and safeguard expectations,
+                see the FTC’s overview of the{" "}
+                <a
+                  href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
+                >
+                  Gramm-Leach-Bliley Act
+                </a>
+                .
               </p>
 
               <div className="mt-6">
@@ -187,21 +209,21 @@ export default function SecurityPage() {
 
             <p className="mt-5 text-lg leading-8 text-slate-300">
               Bankruptcy Control provides platform-level safeguards and
-              operational controls designed to support creditor-side bankruptcy
-              work. It does not replace a client’s own compliance program,
-              legal review, employee training, vendor review, or internal
-              security obligations.
+              operational controls designed to support bankruptcy operations. It
+              does not replace a client’s own compliance program, legal review,
+              employee training, vendor review, or internal security
+              obligations.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              "Access controls",
-              "Audit visibility",
-              "Secure hosting planning",
-              "Backup planning",
-              "Client permissions",
-              "Responsible data handling",
+              "Role-Based Access",
+              "Auditability & Activity History",
+              "Secure Hosting Approach",
+              "Data Protection Practices",
+              "Backup and Recovery Planning",
+              "Controlled User Administration",
             ].map((item) => (
               <div
                 key={item}
