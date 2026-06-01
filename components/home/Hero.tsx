@@ -12,7 +12,9 @@ export function Hero() {
    <section className="overflow-hidden bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 pt-10 pb-16 sm:pt-12 sm:pb-20 lg:pt-14 lg:pb-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
         <div>
-        <div className="mb-5 ml-8 max-w-[200px] -translate-y-6 sm:max-w-[240px] lg:ml-12 lg:max-w-[280px]">
+          {/* LOGO DESIGN IF USED WILL GO HERE */}
+          
+        {/* <div className="mb-5 ml-8 max-w-[200px] -translate-y-6 sm:max-w-[240px] lg:ml-12 lg:max-w-[280px]">
             <Image
               src="/bc-logo-black-2.png"
               alt="Bankruptcy Control logo"
@@ -24,7 +26,7 @@ export function Hero() {
                 height: "auto",
               }}
             />
-          </div>
+          </div> */}
 
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             From monitoring to case resolution
