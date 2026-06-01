@@ -29,8 +29,8 @@ export default function TermsPage() {
           <LegalSection title="Website use">
             <p>
               This website provides general information about Bankruptcy
-              Control, its platform direction, and creditor-side bankruptcy
-              workflow capabilities.
+              Control, its platform direction, and bankruptcy workflow
+              management capabilities.
             </p>
             <p>
               Use of this website does not create a client relationship,
@@ -53,6 +53,14 @@ export default function TermsPage() {
               not be interpreted as a guarantee of specific software
               functionality, regulatory compliance, legal outcome, or business
               result.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="Important notice">
+            <p>
+              This placeholder is provided for website development and review
+              purposes only. It should not be treated as final legal language, a
+              complete agreement, or legal advice.
             </p>
           </LegalSection>
 

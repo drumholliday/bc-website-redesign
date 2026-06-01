@@ -19,14 +19,16 @@ export default function ContactPage() {
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-700">
-            See how Bankruptcy Control helps creditor-side teams manage
-            bankruptcy cases, notices, documents, tasks, reporting, and
-            internal workflow activity after a bankruptcy event occurs.
+           See how Bankruptcy Control helps creditors, lenders, and the firms
+            that support them manage bankruptcy cases, notices, documents,
+            tasks, reporting, and internal workflow activity after a bankruptcy
+            event occurs.
           </p>
 
           <p className="mt-5 text-base leading-7 text-slate-600">
-            Demo conversations use sanitized sample data and can be tailored to
-            lender, creditor, servicer, or creditor-side law firm workflows.
+           Demo conversations use sanitized sample data and can be tailored to
+          lender, creditor, servicing, specialty finance, or creditor-side law
+          firm workflows.
           </p>
 
           <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -159,6 +161,11 @@ export default function ContactPage() {
             />
           </label>
 
+            {/* Sensitive information warning.
+              The public website form should not be used to collect borrower,
+              account, court, Social Security, or other sensitive personal data.
+              A secure intake process can be designed later if needed.
+            */}
           <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-base leading-7 text-amber-900">
             Please do not submit Social Security numbers, borrower account
             numbers, court documents, or other sensitive personal information

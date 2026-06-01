@@ -54,11 +54,26 @@ export default function DisclaimerPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="Sensitive information warning">
+                    <LegalSection title="Sensitive information warning">
             <p>
               Visitors should not submit Social Security numbers, borrower
               account numbers, court documents, or other sensitive personal
               information through the website contact form.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="Important notice">
+            <p>
+              This page is provided for website development and review purposes
+              only. It should not be treated as final legal language, a complete
+              disclaimer, or legal advice.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="Future review">
+            <p>
+              This placeholder page should be replaced with a final Website
+              Disclaimer before the website is used as a production public site.
             </p>
           </LegalSection>
         </div>

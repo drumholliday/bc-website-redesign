@@ -34,7 +34,7 @@ const integrationCategories = [
   {
     title: "Loan Servicing Systems",
     description:
-      "Designed to work alongside existing lender and servicing systems rather than replacing every internal platform a creditor already uses.",
+      "Designed to work alongside existing lender and servicing systems rather than replacing every internal platform an organization already uses.",
     items: [
       "Account and loan references",
       "Case-to-account coordination",
@@ -160,9 +160,9 @@ export default function IntegrationsPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              The goal is not to replace every system a creditor already uses.
-              The goal is to help bankruptcy activity flow into a structured
-              operational workspace where teams can manage cases, tasks,
+              The goal is not to replace every system an organization already
+              uses. The goal is to help bankruptcy activity flow into a
+              structured operational workspace for case management, tasks,
               documents, and reporting.
             </p>
           </div>
@@ -214,7 +214,7 @@ export default function IntegrationsPage() {
 
             <p className="mt-5 text-lg leading-8 text-slate-300">
               Bankruptcy alerts, notices, and court activity are most useful
-              when they help teams understand ownership, deadlines, documents,
+              when they support clear ownership, deadlines, document handling,
               reporting needs, and next steps.
             </p>
           </div>

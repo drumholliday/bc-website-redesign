@@ -102,7 +102,7 @@ export default function DeploymentPage() {
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div>
               <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                Flexible deployment options for creditors and lenders.
+                Flexible deployment options for bankruptcy operations.
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
@@ -159,9 +159,8 @@ export default function DeploymentPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Different creditor-side organizations have different operational,
-              security, vendor review, and infrastructure needs. Bankruptcy
-              Control is intended to support flexible deployment planning
+              Organizations have different operational, security, vendor review, and infrastructure needs. 
+              Bankruptcy Control is intended to support flexible deployment planning
               without forcing every client into the same model.
             </p>
           </div>
@@ -280,7 +279,7 @@ export default function DeploymentPage() {
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Deployment should match the way your team operates.
+              Deployment should match the way your organization operates.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-300">
@@ -325,8 +324,7 @@ export default function DeploymentPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
             Request a private demo to discuss hosting preferences, deployment
-            requirements, security review needs, and the best model for your
-            creditor-side bankruptcy operations.
+            requirements, security review needs, and the best model for your bankruptcy operations.
           </p>
 
           <div className="mt-8">

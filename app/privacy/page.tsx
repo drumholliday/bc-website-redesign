@@ -43,8 +43,18 @@ export default function PrivacyPage() {
           <LegalSection title="Use of information">
             <p>
               Information submitted through the website may be used to respond
-              to inquiries, schedule demos, communicate about Bankruptcy Control,
-              and evaluate potential business needs.
+              to inquiries, schedule demos, communicate about Bankruptcy
+              Control, and evaluate potential business needs.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="Cookies, analytics, and third-party tools">
+            <p>
+              This website may later use analytics, hosting logs, spam
+              protection, contact form processing, or other third-party tools.
+              Any use of cookies, analytics, tracking technologies, or
+              third-party services should be reviewed and reflected in the final
+              Privacy Policy before production launch.
             </p>
           </LegalSection>
 
@@ -52,12 +62,20 @@ export default function PrivacyPage() {
             <p>
               Bankruptcy Control is intended to be designed with secure hosting,
               access controls, auditability, and data-protection practices
-              appropriate for creditor-side bankruptcy operations.
+              appropriate for bankruptcy operations.
             </p>
             <p>
               Website visitors and prospective clients remain responsible for
               avoiding the submission of sensitive borrower, account, court, or
               personal information through public website forms.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="Important notice">
+            <p>
+              This page is provided for website development and review purposes
+              only. It should not be treated as final legal language, a complete
+              privacy disclosure, or legal advice.
             </p>
           </LegalSection>
 

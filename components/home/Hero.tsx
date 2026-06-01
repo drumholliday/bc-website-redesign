@@ -36,10 +36,10 @@ export function Hero() {
 
           <div className="mt-7 max-w-2xl rounded-3xl border border-blue-200 bg-blue-50/80 p-5 shadow-sm">
             <p className="text-2xl font-semibold leading-9 text-slate-950">
-              Bankruptcy monitoring tells you something happened.
+              Bankruptcy monitoring tells you when something happened.
             </p>
             <p className="mt-2 text-2xl font-semibold leading-9 text-blue-700">
-              Bankruptcy Control helps your team manage what happens next.
+              Bankruptcy Control helps you manage what happens next.
             </p>
           </div>
 

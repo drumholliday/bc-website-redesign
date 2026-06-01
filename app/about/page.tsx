@@ -11,7 +11,7 @@ const credibilityCards = [
   {
     title: "Built from workflow experience",
     description:
-      "Bankruptcy Control is based on real operational needs around bankruptcy case tracking, notices, documents, reporting, and internal accountability.",
+      "Bankruptcy Control is based on practical bankruptcy case tracking, notice review, document management, reporting, and internal accountability needs.",
   },
   {
     title: "Focused on creditors and lenders",
@@ -21,22 +21,21 @@ const credibilityCards = [
   {
     title: "Modernized for cloud delivery",
     description:
-      "The current direction focuses on secure cloud deployment, modern user experience, workflow visibility, and configurable operational controls.",
+      "The current direction focuses on secure cloud deployment, modern user experience, workflow visibility, reporting, and configurable operational controls.",
   },
   {
     title: "Designed for practical control",
     description:
-      "The goal is to help teams understand what happened, who is responsible, what needs to happen next, and what must be reported.",
+      "The goal is to help organizations understand what happened, who is responsible, what needs to happen next, and what must be reported.",
   },
 ];
 
 /*
   About page.
 
-  This page explains the background and positioning of Bankruptcy Control.
-  The tone should be credible and practical, not exaggerated. We want visitors
-  to understand that the product is based on real bankruptcy workflow experience
-  and is being modernized into a professional software platform.
+  The homepage includes a short "Why Bankruptcy Control" section.
+  This page gives the fuller background story while keeping the tone practical,
+  credible, and business-focused.
 */
 export default function AboutPage() {
   return (
@@ -44,9 +43,8 @@ export default function AboutPage() {
       {/* 
         PAGE HERO
 
-        This section gives the company/product story at a high level.
-        It avoids sounding like a brand-new untested idea while also making
-        clear that the platform is being modernized for current SaaS needs.
+        This section introduces Bankruptcy Control as a modernization effort
+        rooted in real bankruptcy workflow experience.
       */}
       <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
@@ -61,19 +59,18 @@ export default function AboutPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Bankruptcy Control began as practical bankruptcy case management
-                software used to support creditor-focused operations. The
-                platform is being modernized for secure cloud delivery,
-                workflow visibility, reporting, and internal case management.
+                Bankruptcy Control began as operational bankruptcy case
+                management software used to support creditor-focused workflows.
+                The platform is being modernized for secure cloud deployment,
+                subscriptions, integrations, and dedicated environments.
               </p>
             </div>
 
             {/* 
-              Positioning card.
+              POSITIONING CARD
 
-              This card reinforces the difference between Bankruptcy Control
-              and debtor-side bankruptcy filing tools or full outsourcing
-              services. It keeps the language simple and buyer-focused.
+              This card explains what Bankruptcy Control is meant to help with
+              without making the product sound like a generic SaaS startup.
             */}
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 className="text-2xl font-semibold text-slate-950">
@@ -96,11 +93,10 @@ export default function AboutPage() {
       </section>
 
       {/* 
-        STORY SECTION
+        BACKGROUND SECTION
 
-        This section explains the product history in a calm, professional way.
-        It should not overstate the product's current state, but it should give
-        visitors confidence that the platform is grounded in real workflows.
+        This section explains the difference between a generic new SaaS product
+        and a modernization effort based on actual workflow needs.
       */}
       <section className="px-6 py-20">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -116,8 +112,8 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-lg leading-8 text-slate-600">
             <p>
-              Bankruptcy Control is not positioned as a generic startup concept
-              or a debtor-side bankruptcy filing tool. The platform is built
+              Bankruptcy Control is not positioned as debtor-side bankruptcy
+              filing software or a generic task management tool. It is built
               around the operational reality of bankruptcy work for creditors,
               lenders, and related firms.
             </p>
@@ -132,8 +128,8 @@ export default function AboutPage() {
 
             <p>
               The modernization effort focuses on preserving practical workflow
-              knowledge while improving the platform’s usability, deployment
-              model, security posture, reporting structure, and long-term
+              knowledge while improving usability, deployment flexibility,
+              security posture, reporting structure, and long-term
               maintainability.
             </p>
           </div>
@@ -143,8 +139,7 @@ export default function AboutPage() {
       {/* 
         CREDIBILITY CARDS
 
-        These cards quickly summarize why the product story matters. They are
-        intentionally practical rather than flashy.
+        These cards give visitors quick reasons to trust the platform direction.
       */}
       <section className="bg-slate-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
@@ -158,8 +153,8 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              Bankruptcy work creates specific operational needs: notices,
-              case activity, deadlines, documents, claims, reporting, and
+              Bankruptcy work creates specific operational needs: notices, case
+              activity, deadlines, documents, claims, reporting, and
               accountability. Bankruptcy Control is designed around those needs.
             </p>
           </div>
@@ -186,8 +181,9 @@ export default function AboutPage() {
       {/* 
         DARK POSITIONING SECTION
 
-        This section reinforces the distinction between monitoring alone and
-        broader case-management operations.
+        This section reinforces the core product distinction:
+        monitoring identifies activity, but Bankruptcy Control helps manage the
+        response.
       */}
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -231,8 +227,7 @@ export default function AboutPage() {
       {/* 
         FINAL CTA
 
-        This keeps the About page connected to the site's main conversion goal:
-        private demo requests.
+        The About page should still lead qualified visitors toward a demo.
       */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
