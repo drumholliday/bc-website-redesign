@@ -46,10 +46,10 @@ const securityControls = [
     description:
       "Support data protection needs with careful access control, secure workflow design, and responsible safeguard planning.",
     items: [
-      "GLBA-aware practices",
       "Sensitive data handling awareness",
       "Secure workflow design",
       "Client responsibility boundaries",
+      "GLBA-aware practices",
     ],
   },
 ];
@@ -184,6 +184,20 @@ export default function SecurityPage() {
                     </li>
                   ))}
                 </ul>
+                {control.title === "Data Protection Practices" && (
+                <p className="mt-6 text-base leading-7 text-slate-600">
+                  For additional info, see the FTC’s overview of the{" "}
+                  <a
+                    href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-800"
+                  >
+                    Gramm-Leach-Bliley Act
+                  </a>
+                  .
+                </p>
+              )}
               </div>
             ))}
           </div>
