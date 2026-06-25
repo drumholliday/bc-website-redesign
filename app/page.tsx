@@ -2,7 +2,7 @@ import { Hero } from "@/components/home/Hero";
 import { CardCarousel } from "@/components/home/CardCarousel";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
-import { industries } from "@/data/industries";
+
 import { platformFeatures } from "@/data/platformFeatures";
 import { Button } from "@/components/ui/Button";
 
@@ -25,8 +25,8 @@ export default function Home() {
       */}
       <Section
         eyebrow="Solutions"
-        title="Built for the organizations managing creditor-side bankruptcy work."
-        description="Bankruptcy Control supports different types of creditor-side organizations, from lenders and financial institutions to the firms that support bankruptcy operations."
+        title="Built for creditors, lenders, and the firms that support them."
+        description="Bankruptcy Control supports organizations that manage bankruptcy activity, notices, documents, reporting, deadlines, and operational workflows from the creditor side of the process."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           <Card
@@ -56,14 +56,7 @@ export default function Home() {
         The carousel avoids a large wall of cards while keeping all
         audience cards available to browse.
       */}
-      <Section
-        className="bg-slate-50 dark:bg-slate-950"
-        eyebrow="Who It Serves"
-        title="Built for creditors, lenders, and the firms that support them."
-        description="Bankruptcy Control supports organizations that manage bankruptcy activity, notices, documents, reporting, deadlines, and operational workflows from the creditor side of the process."
-      >
-        <CardCarousel items={industries.slice(0, 8)} />
-      </Section>
+      
 
       {/* 
         CORE FEATURES PREVIEW SECTION
@@ -76,15 +69,8 @@ export default function Home() {
         title="What Bankruptcy Control helps manage."
         description="Visibility, workflow discipline, reporting, and operational control for bankruptcy case management from monitoring through resolution."
       >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {platformFeatures.map((feature) => (
-            <Card
-              key={feature.href + feature.title}
-              title={feature.title}
-              description={feature.description}
-              href={feature.href}
-            />
-          ))}
+        <div className="mt-12">
+          <CardCarousel items={platformFeatures} />
         </div>
       </Section>
 

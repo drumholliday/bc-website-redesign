@@ -167,12 +167,6 @@ export default async function IndustryDetailPage({ params }: PageProps) {
     <main className="bg-white text-slate-950">
       <section className="bg-slate-950 px-6 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <Link
-            href="/industries"
-            className="mb-6 inline-flex text-sm font-semibold text-blue-300 hover:text-blue-200 hover:underline hover:underline-offset-4"
-          >
-            ← Back to Industries
-          </Link>
 
           <p className="mb-5 inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">
             {page.eyebrow}
