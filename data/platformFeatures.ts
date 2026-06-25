@@ -5,37 +5,37 @@ export const platformFeatures = [
     title: "Case Management",
     description:
       "Track bankruptcy cases, parties, status, ownership, and activity history in one organized workspace.",
-    href: "/platform",
+    href: "/platform/case-management",
   },
   {
     title: "Workflow Management",
     description:
       "Turn bankruptcy activity into assigned tasks, follow-up steps, deadlines, and internal accountability.",
-    href: "/platform",
+    href: "/platform/monitoring-notices",
   },
   {
     title: "Court Notices",
     description:
       "Support workflows around notices, docket activity, court data, and bankruptcy event review.",
-    href: "/platform",
+    href: "/platform/monitoring-notices",
   },
   {
     title: "Tasks & Deadlines",
     description:
       "Help teams manage follow-up work, due dates, ownership, and operational handoffs.",
-    href: "/platform",
+    href: "/platform/tasks-deadlines",
   },
   {
     title: "Reporting & Audit Trails",
     description:
       "Create visibility for management, clients, compliance review, and internal operational reporting.",
-    href: "/platform",
+    href: "/platform/reporting-audit-trails",
   },
   {
     title: "Document Management",
     description:
       "Organize generated documents, review copies, templates, attachments, and case-related files.",
-    href: "/platform",
+    href: "/platform/documents",
   },
   {
     title: "Security & Access",

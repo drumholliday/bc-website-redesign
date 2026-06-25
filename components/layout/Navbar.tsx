@@ -91,10 +91,10 @@ const navGroups: NavGroup[] = [
               "Support generated documents, review copies, and document history.",
           },
           {
-            label: "Reports & Exports",
-            href: "/platform/reports-exports",
+            label: "Reporting & Audit Trails",
+            href: "/platform/reporting-audit-trails",
             description:
-              "Create visibility for management, clients, and internal review.",
+              "Create visibility for management, clients, compliance review, and internal operations.",
           },
         ],
       },
