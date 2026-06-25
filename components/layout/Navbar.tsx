@@ -120,13 +120,13 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "Consumer & Installment Lenders",
-            href: "/industries/lenders-creditors",
+            href: "/industries/consumer-installment-lenders",
             description:
               "Support high-volume account and bankruptcy workflows.",
           },
           {
             label: "Title / Auto Lenders",
-            href: "/industries/lenders-creditors",
+            href: "/industries/title-auto-lenders",
             description:
               "Manage secured account issues, notices, and follow-up.",
           },
@@ -143,19 +143,19 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "Manufactured & Mobile Home Lenders",
-            href: "/industries/financial-organizations",
+            href: "/industries/manufactured-mobile-home-lenders",
             description:
               "Track cases involving collateral, notices, and court activity.",
           },
           {
             label: "Credit Unions & Regional Lenders",
-            href: "/industries/financial-organizations",
+            href: "/industries/credit-unions-regional-lenders",
             description:
               "Support internal teams with clearer bankruptcy workflow control.",
           },
           {
             label: "Specialty Finance Companies",
-            href: "/industries/financial-organizations",
+            href: "/industries/specialty-finance-companies",
             description:
               "Handle specialized creditor workflows and reporting needs.",
           },
@@ -172,13 +172,13 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "Creditor-Side Law Firms",
-            href: "/industries/supporting-firms",
+            href: "/industries/creditor-side-law-firms",
             description:
               "Coordinate legal workflow, documents, deadlines, and client visibility.",
           },
           {
             label: "Other Creditor-Side Teams",
-            href: "/industries/supporting-firms",
+            href: "/industries/other-creditor-side-teams",
             description:
               "Support organizations that manage creditor bankruptcy operations.",
           },

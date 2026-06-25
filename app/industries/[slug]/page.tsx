@@ -1,18 +1,15 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 
 /*
   Industry detail pages.
 
-  These pages support the three homepage Solutions cards:
-  - /industries/lenders-creditors
-  - /industries/financial-organizations
-  - /industries/supporting-firms
+  These pages support both:
+  - The three broad Solutions cards on the homepage
+  - The more specific Solutions links in the navbar
 
-  They provide more detail than the broad Industries overview page while
-  keeping the content grouped around the same Solutions structure used
-  in the navbar and homepage.
+  The broad category pages give an overview of each solution group.
+  The individual pages give more specific content for each industry type.
 */
 
 type IndustryDetailPage = {
@@ -141,6 +138,304 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
     ],
   },
+
+  "consumer-installment-lenders": {
+    eyebrow: "Consumer & Installment Lenders",
+    title:
+      "Bankruptcy workflow support for consumer and installment lending portfolios.",
+    description:
+      "Bankruptcy Control helps consumer and installment lenders organize bankruptcy cases, notices, tasks, documents, deadlines, and internal reporting across creditor-side operations.",
+    sections: [
+      {
+        title: "Portfolio Visibility",
+        description:
+          "Support teams that need a clearer view of bankruptcy activity across consumer lending accounts.",
+        items: [
+          "Bankruptcy case tracking",
+          "Account-level visibility",
+          "Notice review support",
+          "Portfolio workflow organization",
+        ],
+      },
+      {
+        title: "Operational Follow-Up",
+        description:
+          "Help internal teams manage the work that follows bankruptcy activity.",
+        items: [
+          "Task assignment",
+          "Deadline awareness",
+          "Case status updates",
+          "Internal handoff support",
+        ],
+      },
+      {
+        title: "Reporting Support",
+        description:
+          "Create better visibility for management, servicing teams, and internal review.",
+        items: [
+          "Case summaries",
+          "Workflow reporting",
+          "Activity history",
+          "Operational review support",
+        ],
+      },
+    ],
+  },
+
+  "title-auto-lenders": {
+    eyebrow: "Title / Auto Lenders",
+    title: "Bankruptcy workflow support for title and auto lending operations.",
+    description:
+      "Bankruptcy Control helps secured lenders manage bankruptcy matters involving vehicle collateral, notices, deadlines, documents, and follow-up workflows.",
+    sections: [
+      {
+        title: "Secured Collateral Workflows",
+        description:
+          "Organize bankruptcy activity involving secured accounts and vehicle collateral.",
+        items: [
+          "Collateral-related case tracking",
+          "Account and case organization",
+          "Notice review support",
+          "Status visibility",
+        ],
+      },
+      {
+        title: "Notice and Deadline Review",
+        description:
+          "Help teams track important events and follow-up work tied to bankruptcy cases.",
+        items: [
+          "Court notice organization",
+          "Deadline visibility",
+          "Task ownership",
+          "Follow-up tracking",
+        ],
+      },
+      {
+        title: "Team Coordination",
+        description:
+          "Support communication and accountability across servicing, legal, and operations teams.",
+        items: [
+          "Internal workflow notes",
+          "Assigned responsibilities",
+          "Document organization",
+          "Management visibility",
+        ],
+      },
+    ],
+  },
+
+  "manufactured-mobile-home-lenders": {
+    eyebrow: "Manufactured & Mobile Home Lenders",
+    title:
+      "Bankruptcy workflow support for manufactured and mobile home lending.",
+    description:
+      "Bankruptcy Control helps lenders managing manufactured housing and mobile home portfolios organize case activity, documents, notices, tasks, and reporting.",
+    sections: [
+      {
+        title: "Portfolio Case Tracking",
+        description:
+          "Support bankruptcy workflows involving manufactured housing and mobile home lending portfolios.",
+        items: [
+          "Case status visibility",
+          "Collateral-related workflow support",
+          "Notice organization",
+          "Account-level tracking",
+        ],
+      },
+      {
+        title: "Document and Notice Organization",
+        description:
+          "Keep important case documents, notices, and review materials connected to the right matter.",
+        items: [
+          "Document organization",
+          "Generated file history",
+          "Notice review support",
+          "Case activity records",
+        ],
+      },
+      {
+        title: "Operational Accountability",
+        description:
+          "Help teams understand who owns the next step and what work remains open.",
+        items: [
+          "Task assignment",
+          "Deadline tracking",
+          "Workflow visibility",
+          "Internal reporting",
+        ],
+      },
+    ],
+  },
+
+  "credit-unions-regional-lenders": {
+    eyebrow: "Credit Unions & Regional Lenders",
+    title:
+      "Structured bankruptcy workflows for credit unions and regional lenders.",
+    description:
+      "Bankruptcy Control gives smaller and mid-sized lending organizations a structured way to manage bankruptcy cases without replacing every existing system.",
+    sections: [
+      {
+        title: "Bankruptcy Workflow Structure",
+        description:
+          "Organize bankruptcy work in a dedicated platform while preserving existing servicing and operational systems.",
+        items: [
+          "Case organization",
+          "Notice tracking",
+          "Task visibility",
+          "Document support",
+        ],
+      },
+      {
+        title: "Internal Team Coordination",
+        description:
+          "Help smaller teams coordinate responsibilities and avoid missed handoffs.",
+        items: [
+          "Assigned ownership",
+          "Follow-up tracking",
+          "Deadline awareness",
+          "Activity history",
+        ],
+      },
+      {
+        title: "Management Visibility",
+        description:
+          "Support leadership review with clearer reporting and operational visibility.",
+        items: [
+          "Case summaries",
+          "Workflow reporting",
+          "Open item visibility",
+          "Review support",
+        ],
+      },
+    ],
+  },
+
+  "specialty-finance-companies": {
+    eyebrow: "Specialty Finance Companies",
+    title: "Configurable bankruptcy workflows for specialty finance operations.",
+    description:
+      "Bankruptcy Control supports portfolio-specific bankruptcy workflows for organizations with specialized lending, servicing, or creditor-side operational needs.",
+    sections: [
+      {
+        title: "Configurable Workflow Support",
+        description:
+          "Support bankruptcy processes that may not fit a one-size-fits-all workflow.",
+        items: [
+          "Flexible case structure",
+          "Custom workflow planning",
+          "Task and status visibility",
+          "Operational review support",
+        ],
+      },
+      {
+        title: "Case and Account Organization",
+        description:
+          "Keep related case, account, notice, and document information easier to review.",
+        items: [
+          "Case detail tracking",
+          "Account-level context",
+          "Notice organization",
+          "Document visibility",
+        ],
+      },
+      {
+        title: "Reporting and Review",
+        description:
+          "Help teams create visibility into bankruptcy operations and portfolio activity.",
+        items: [
+          "Operational reporting",
+          "Workflow summaries",
+          "Activity history",
+          "Management review support",
+        ],
+      },
+    ],
+  },
+
+  "creditor-side-law-firms": {
+    eyebrow: "Creditor-Side Law Firms",
+    title: "Bankruptcy workflow support for creditor-side law firms.",
+    description:
+      "Bankruptcy Control helps firms working on behalf of creditors coordinate case details, documents, deadlines, tasks, reporting, and client visibility.",
+    sections: [
+      {
+        title: "Case Detail Coordination",
+        description:
+          "Organize creditor-side bankruptcy case information in a structured workflow environment.",
+        items: [
+          "Matter and case tracking",
+          "Party and account information",
+          "Case status visibility",
+          "Activity history",
+        ],
+      },
+      {
+        title: "Documents and Deadlines",
+        description:
+          "Support document organization, deadline awareness, and follow-up work.",
+        items: [
+          "Document tracking",
+          "Deadline visibility",
+          "Generated file history",
+          "Review copy support",
+        ],
+      },
+      {
+        title: "Client Reporting Support",
+        description:
+          "Help firms provide clearer visibility to creditor clients and internal teams.",
+        items: [
+          "Case summaries",
+          "Workflow status reporting",
+          "Open item review",
+          "Operational accountability",
+        ],
+      },
+    ],
+  },
+
+  "other-creditor-side-teams": {
+    eyebrow: "Other Creditor-Side Teams",
+    title:
+      "Flexible bankruptcy workflow support for teams working on behalf of creditors.",
+    description:
+      "Bankruptcy Control can support organizations that manage bankruptcy activity, notices, documents, tasks, and reporting for creditor-side operations.",
+    sections: [
+      {
+        title: "Flexible Workflow Structure",
+        description:
+          "Adapt bankruptcy case management around the way the organization handles creditor-side work.",
+        items: [
+          "Case workflow organization",
+          "Notice visibility",
+          "Task coordination",
+          "Document support",
+        ],
+      },
+      {
+        title: "Operational Visibility",
+        description:
+          "Help teams understand what is active, what needs follow-up, and where work stands.",
+        items: [
+          "Status tracking",
+          "Ownership visibility",
+          "Deadline awareness",
+          "Activity history",
+        ],
+      },
+      {
+        title: "Reporting and Accountability",
+        description:
+          "Support review, reporting, and internal accountability across bankruptcy workflows.",
+        items: [
+          "Operational reports",
+          "Workflow summaries",
+          "Management review",
+          "Case activity records",
+        ],
+      },
+    ],
+  },
 };
 
 type PageProps = {
@@ -167,7 +462,6 @@ export default async function IndustryDetailPage({ params }: PageProps) {
     <main className="bg-white text-slate-950">
       <section className="bg-slate-950 px-6 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl">
-
           <p className="mb-5 inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-200">
             {page.eyebrow}
           </p>
@@ -235,7 +529,7 @@ export default async function IndustryDetailPage({ params }: PageProps) {
             <Button href="/contact">Request a Demo</Button>
 
             <Button href="/platform" variant="secondary">
-              Explore Platform
+              View Platform Overview
             </Button>
           </div>
         </div>
