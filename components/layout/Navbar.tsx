@@ -383,7 +383,7 @@ export function Navbar() {
                 >
                   <div
                     className={cn(
-                      "overflow-hidden border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900",
+                      "overflow-hidden border border-slate-200 bg-white shadow-2xl shadow-slate-950/20 dark:border-slate-600 dark:bg-slate-800 dark:shadow-blue-950/40",
                       isMegaMenu ? "rounded-none border-x-0" : "rounded-3xl",
                     )}
                   >
@@ -407,7 +407,7 @@ export function Navbar() {
                                 key={`${section.title}-${link.label}`}
                                 href={link.href}
                                 onClick={() => setOpenGroup(null)}
-                                className="block cursor-pointer rounded-2xl px-3 py-2 transition hover:bg-slate-50 dark:hover:bg-slate-800"
+                                className="block cursor-pointer rounded-2xl px-3 py-2 transition hover:bg-slate-50 dark:hover:bg-slate-700"
                               >
                                 <span className="block text-sm font-semibold text-slate-950 dark:text-white">
                                   {link.label}
