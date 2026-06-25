@@ -40,7 +40,7 @@ export function CardCarousel({ items }: CardCarouselProps) {
     <div>
       <div
         ref={carouselRef}
-        className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pt-5 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item) => (
           <div
