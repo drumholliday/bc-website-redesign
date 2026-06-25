@@ -254,14 +254,9 @@ const navGroups: NavGroup[] = [
             description: "Review the website privacy placeholder.",
           },
           {
-            label: "Terms",
+            label: "Terms & Disclaimer",
             href: "/terms",
-            description: "Review the website terms placeholder.",
-          },
-          {
-            label: "Disclaimer",
-            href: "/disclaimer",
-            description: "Review the website disclaimer placeholder.",
+            description: "Review website terms and disclaimer information.",
           },
         ],
       },
@@ -325,10 +320,11 @@ export function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden items-center gap-1 lg:flex">
           {navGroups.map((group) => {
-            const active = isGroupActive(group);
+              const active = isGroupActive(group);
+              const isMegaMenu = group.sections.length >= 3;
 
-            return (
-              <div key={group.label} className="group relative">
+              return (
+              <div key={group.label} className="group relative flex h-20 items-center">
                 <Link
                   href={group.href}
                   className={cn(
@@ -342,13 +338,29 @@ export function Navbar() {
                     ▾
                   </span>
                 </Link>
-
-                <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[44rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-                  <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900">
-                    <div className="grid gap-6 p-6 md:grid-cols-3">
+                    <div
+                      className={cn(
+                        "pointer-events-none z-50 translate-y-2 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100",
+                        isMegaMenu
+                          ? "fixed left-0 right-0 top-20"
+                          : "absolute right-0 top-full w-[32rem] max-w-[calc(100vw-3rem)]",
+                      )}
+                    >
+                 <div
+                    className={cn(
+                      "overflow-hidden border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900",
+                      isMegaMenu ? "rounded-none border-x-0" : "rounded-3xl",
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "grid gap-8 p-6",
+                        isMegaMenu ? "mx-auto max-w-7xl md:grid-cols-3" : "md:grid-cols-2",
+                      )}
+                    >
                       {group.sections.map((section) => (
                         <div key={section.title}>
-                          <p className="mb-3 cursor-default text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">
+                          <p className="mb-3 cursor-default text-xs font-bold uppercase tracking-[0.18em] text-sky-300">
                             {section.title}
                           </p>
 
@@ -362,12 +374,6 @@ export function Navbar() {
                                 <span className="block text-sm font-semibold text-slate-950 dark:text-white">
                                   {link.label}
                                 </span>
-
-                                {link.description && (
-                                  <span className="mt-1 block text-sm leading-6 text-slate-500 dark:text-slate-300">
-                                    {link.description}
-                                  </span>
-                                )}
                               </Link>
                             ))}
                           </div>

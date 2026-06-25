@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { CardCarousel } from "@/components/home/CardCarousel";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { industries } from "@/data/industries";
@@ -8,16 +9,8 @@ import { Button } from "@/components/ui/Button";
 /*
   Homepage for Bankruptcy Control.
 
-  This page is the marketing landing page. It should quickly explain:
-  - what problem Bankruptcy Control solves,
-  - who the product serves,
-  - what core features it offers,
-  - why the platform is credible,
-  - and how a prospect can request a private demo.
-
-  The navbar links go to separate overview pages such as Platform, Industries,
-  Security, Deployment, and About. Because of that, the homepage section labels
-  should feel like previews/selling points, not duplicate navbar destinations.
+  This landing page explains the product, who it serves, what it helps manage,
+  why it is credible, and how qualified prospects can request a private demo.
 */
 export default function Home() {
   return (
@@ -25,57 +18,43 @@ export default function Home() {
       <Hero />
 
       {/* 
-        PROBLEM / SOLUTION SECTION
+        SOLUTIONS PREVIEW SECTION
 
-        This section explains the main product positioning:
-        bankruptcy monitoring is useful, but Bankruptcy Control helps manage
-        the operational work that follows the alert or notice.
+        Three audience-based cards that match the Solutions dropdown in
+        the navbar. These can later lead to dedicated detail pages.
       */}
       <Section
-        eyebrow="Problem / Solution"
-        title="Monitoring is only the beginning."
-        description="Bankruptcy Control helps teams monitor bankruptcy activity, receive notices, and manage the operational response that follows, including case tracking, tasks, documents, reporting, deadlines, and internal accountability."
+        eyebrow="Solutions"
+        title="Built for the organizations managing creditor-side bankruptcy work."
+        description="Bankruptcy Control supports different types of creditor-side organizations, from lenders and financial institutions to the firms that support bankruptcy operations."
       >
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-              What monitoring helps identify
-            </h3>
+        <div className="grid gap-6 lg:grid-cols-3">
+          <Card
+            title="Lenders & Creditors"
+            description="For consumer lenders, installment lenders, title and auto lenders, and creditor teams that need better case visibility, notice tracking, and operational follow-up."
+            href="/industries/lenders-creditors"
+          />
 
-            <ul className="mt-6 space-y-4 text-slate-600 dark:text-slate-300">
-              <li>A bankruptcy filing occurred</li>
-              <li>A notice was received</li>
-              <li>A docket or case event changed</li>
-            </ul>
-          </div>
+          <Card
+            title="Financial Organizations"
+            description="For manufactured and mobile home lenders, credit unions, regional lenders, specialty finance companies, and secured creditors managing bankruptcy workflows."
+            href="/industries/financial-organizations"
+          />
 
-          <div className="rounded-3xl border border-blue-200 bg-blue-50 p-8 shadow-sm dark:border-blue-500/30 dark:bg-blue-500/10">
-            <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-              What Bankruptcy Control helps manage
-            </h3>
-
-            <ul className="mt-6 space-y-4 text-slate-700 dark:text-slate-300">
-              <li>Who is responsible</li>
-              <li>What needs to happen next</li>
-              <li>Which documents and deadlines matter</li>
-              <li>What needs to be reported</li>
-            </ul>
-          </div>
+          <Card
+            title="Supporting Firms"
+            description="For creditor-side law firms and support teams that coordinate legal workflow, documents, deadlines, reporting, and client visibility."
+            href="/industries/supporting-firms"
+          />
         </div>
       </Section>
 
       {/* 
-        AUDIENCE PREVIEW SECTION
+        AUDIENCE CAROUSEL SECTION
 
-        This is a homepage preview of the industries/audiences Bankruptcy
-        Control can support. The navbar Industries link goes to the broader
-        Industries overview page, so this section is labeled "Who It Serves"
-        instead of "Industries" to avoid making it feel like a duplicate
-        navbar destination.
-
-        Important:
-        Since multiple cards may temporarily point to the same page, use
-        industry.title as the React key instead of industry.href.
+        Preview of the organizations Bankruptcy Control can support.
+        The carousel avoids a large wall of cards while keeping all
+        audience cards available to browse.
       */}
       <Section
         className="bg-slate-50 dark:bg-slate-950"
@@ -83,26 +62,14 @@ export default function Home() {
         title="Built for creditors, lenders, and the firms that support them."
         description="Bankruptcy Control supports organizations that manage bankruptcy activity, notices, documents, reporting, deadlines, and operational workflows from the creditor side of the process."
       >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {industries.slice(0, 8).map((industry) => (
-            <Card
-              key={industry.title}
-              title={industry.title}
-              description={industry.description}
-              href={industry.href}
-            />
-          ))}
-        </div>
+        <CardCarousel items={industries.slice(0, 8)} />
       </Section>
 
       {/* 
         CORE FEATURES PREVIEW SECTION
 
-        This section previews the main product capabilities on the homepage.
-        It is intentionally labeled "Core Features" instead of "Platform"
-        because the navbar Platform link goes to a separate overview page.
-
-        The cards can eventually link to individual feature detail pages.
+        A homepage preview of the main platform capabilities.
+        The full Platform page can explain these in more detail.
       */}
       <Section
         eyebrow="Core Features"
@@ -124,12 +91,8 @@ export default function Home() {
       {/* 
         SECURE OPERATIONS PREVIEW SECTION
 
-        This section gives a short homepage preview of security, auditability,
-        hosting, backups, and administrative control.
-
-        The navbar has separate Security and Deployment pages, so the homepage
-        section is labeled "Secure Operations" instead of "Security & Deployment"
-        to avoid making users expect the navbar to scroll to this section.
+        Homepage preview of access control, auditability, hosting,
+        backups, and responsible data-protection planning.
       */}
       <Section className="bg-slate-950 text-white dark:bg-black">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -175,9 +138,8 @@ export default function Home() {
       {/* 
         CREDIBILITY SECTION
 
-        This section explains why Bankruptcy Control is not just a generic
-        software concept. It points to real workflow experience, modernization,
-        and creditor/lender focus.
+        Explains why Bankruptcy Control is not a generic software concept:
+        it comes from real creditor-side bankruptcy workflow experience.
       */}
       <Section
         eyebrow="Why Bankruptcy Control"
@@ -206,9 +168,8 @@ export default function Home() {
       {/* 
         PRIVATE DEMO CTA
 
-        Final homepage call-to-action. This section sends qualified visitors
-        toward the Contact/Demo page and gives them a secondary path to the
-        Platform overview page.
+        Final homepage call-to-action with a primary demo path and
+        a secondary path to the Platform overview.
       */}
       <Section className="bg-blue-50 dark:bg-blue-500/10" centered>
         <div className="mx-auto max-w-3xl text-center">
@@ -222,8 +183,8 @@ export default function Home() {
 
           <p className="mt-5 text-base leading-7 text-slate-700 dark:text-slate-300">
             We will tailor the demo to your workflow and use sanitized sample
-            data to show how Bankruptcy Control helps teams manage bankruptcy
-            cases from detection through resolution.
+            data to show how Bankruptcy Control helps organizations manage
+            bankruptcy cases from detection through resolution.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
