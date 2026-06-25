@@ -332,7 +332,7 @@ export function Navbar() {
                 <Link
                   href={group.href}
                   className={cn(
-                    "inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white",
+                    "inline-flex cursor-pointer items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white",
                     active &&
                       "bg-slate-100 text-slate-950 dark:bg-slate-800 dark:text-white",
                   )}
@@ -343,12 +343,12 @@ export function Navbar() {
                   </span>
                 </Link>
 
-                <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-3 w-[44rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 translate-y-2 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[44rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900">
                     <div className="grid gap-6 p-6 md:grid-cols-3">
                       {group.sections.map((section) => (
                         <div key={section.title}>
-                          <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">
+                          <p className="mb-3 cursor-default text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">
                             {section.title}
                           </p>
 
@@ -357,7 +357,7 @@ export function Navbar() {
                               <Link
                                 key={`${section.title}-${link.label}`}
                                 href={link.href}
-                                className="block rounded-2xl px-3 py-2 transition hover:bg-slate-50 dark:hover:bg-slate-800"
+                                className="block cursor-pointer rounded-2xl px-3 py-2 transition hover:bg-slate-50 dark:hover:bg-slate-800"
                               >
                                 <span className="block text-sm font-semibold text-slate-950 dark:text-white">
                                   {link.label}
