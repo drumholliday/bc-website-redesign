@@ -166,6 +166,7 @@ export default function ContactPage() {
               account, court, Social Security, or other sensitive personal data.
               A secure intake process can be designed later if needed.
             */}
+            
           <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-base leading-7 text-amber-900">
             Please do not submit Social Security numbers, borrower account
             numbers, court documents, or other sensitive personal information
