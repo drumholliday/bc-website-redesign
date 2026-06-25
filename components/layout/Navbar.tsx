@@ -58,7 +58,7 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "Case Management",
-            href: "/platform",
+            href: "/platform/case-management",
             description:
               "Track cases, parties, status, ownership, and activity history.",
           },
@@ -69,13 +69,13 @@ const navGroups: NavGroup[] = [
         links: [
           {
             label: "Monitoring & Notices",
-            href: "/integrations",
+            href: "/platform/monitoring-notices",
             description:
               "Turn bankruptcy activity and notices into organized workflows.",
           },
           {
             label: "Tasks & Deadlines",
-            href: "/platform",
+            href: "/platform/tasks-deadlines",
             description:
               "Assign work, manage follow-up, and reduce missed handoffs.",
           },
@@ -86,13 +86,13 @@ const navGroups: NavGroup[] = [
         links: [
           {
             label: "Documents",
-            href: "/platform",
+            href: "/platform/documents",
             description:
               "Support generated documents, review copies, and document history.",
           },
           {
             label: "Reports & Exports",
-            href: "/platform",
+            href: "/platform/reports-exports",
             description:
               "Create visibility for management, clients, and internal review.",
           },
@@ -207,7 +207,7 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "GLBA-Aware Safeguards",
-            href: "/security",
+            href: "/resources/glba-aware-safeguards",
             description:
               "Understand the security posture and client responsibility boundaries.",
           },
@@ -224,7 +224,7 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "Implementation Planning",
-            href: "/deployment",
+            href: "/resources/implementation-planning",
             description:
               "Plan deployment around security, operations, and vendor review needs.",
           },
@@ -241,7 +241,7 @@ const navGroups: NavGroup[] = [
           },
           {
             label: "PACER & Court Data Workflows",
-            href: "/integrations",
+            href: "/resources/pacer-court-data-workflows",
             description:
               "Support court-data workflows where access and authorization are available.",
           },

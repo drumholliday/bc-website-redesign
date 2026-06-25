@@ -2,51 +2,51 @@
 // These are intentionally practical and plain-spoken for a creditor/lender audience.
 export const platformFeatures = [
   {
-    title: "Case Management Dashboard",
+    title: "Case Management",
     description:
-      "Give teams a clear view of active bankruptcy matters, case status, responsible users, and next steps.",
-    href: "/platform/case-management",
+      "Track bankruptcy cases, parties, status, ownership, and activity history in one organized workspace.",
+    href: "/platform",
   },
   {
-    title: "Debtor & Account Tracking",
+    title: "Workflow Management",
     description:
-      "Organize debtor, account, loan, collateral, attorney, trustee, and case details in one operational workspace.",
-    href: "/platform/case-management",
+      "Turn bankruptcy activity into assigned tasks, follow-up steps, deadlines, and internal accountability.",
+    href: "/platform",
   },
   {
-    title: "Court Notice Management",
+    title: "Court Notices",
     description:
-      "Track bankruptcy notices, docket updates, document intake, and related workflow activity.",
-    href: "/platform/court-notices",
+      "Support workflows around notices, docket activity, court data, and bankruptcy event review.",
+    href: "/platform",
   },
   {
-    title: "Task & Deadline Tracking",
+    title: "Tasks & Deadlines",
     description:
-      "Help teams manage assignments, follow-ups, proof of claim dates, hearings, and internal deadlines.",
-    href: "/platform/task-deadline-tracking",
+      "Help teams manage follow-up work, due dates, ownership, and operational handoffs.",
+    href: "/platform",
   },
   {
     title: "Reporting & Audit Trails",
     description:
-      "Support visibility and accountability with activity history, reporting views, and workflow records.",
-    href: "/platform/reporting-audit-trails",
-  },
-  {
-    title: "Document Storage",
-    description:
-      "Keep case-related notices, documents, correspondence, and supporting materials organized by matter.",
-    href: "/platform/document-management",
-  },
-  {
-    title: "Role-Based Access",
-    description:
-      "Control access by user role, team, client, and operational responsibility.",
-    href: "/platform/security-access",
-  },
-  {
-    title: "Client-Specific Configuration",
-    description:
-      "Adapt workflows, fields, permissions, and reporting views around different creditor-side operations.",
+      "Create visibility for management, clients, compliance review, and internal operational reporting.",
     href: "/platform",
+  },
+  {
+    title: "Document Management",
+    description:
+      "Organize generated documents, review copies, templates, attachments, and case-related files.",
+    href: "/platform",
+  },
+  {
+    title: "Security & Access",
+    description:
+      "Support role-based access planning, audit visibility, and secure operational workflows.",
+    href: "/security",
+  },
+  {
+    title: "Deployment Planning",
+    description:
+      "Review hosted deployment, implementation planning, rollout support, and operational readiness.",
+    href: "/deployment",
   },
 ];
