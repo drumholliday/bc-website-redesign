@@ -1,17 +1,22 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 /*
-  Industries page content data.
+  Industries page.
 
-  These cards describe the main audience groups Bankruptcy Control may serve.
-  Keeping this information in an array makes it easier to update the page as
-  the business confirms which industries and client types should be emphasized.
+  This page gives visitors a broad overview of the creditor-side
+  organizations Bankruptcy Control is designed to support.
+
+  Each card links to a more specific industry detail page using the
+  dynamic /industries/[slug] route.
 */
+
 const industries = [
   {
     title: "Consumer & Installment Lenders",
     description:
       "Support bankruptcy case workflows for consumer lending portfolios, internal teams, and servicing operations.",
+    href: "/industries/consumer-installment-lenders",
     items: [
       "Portfolio bankruptcy activity visibility",
       "Case and notice tracking",
@@ -23,6 +28,7 @@ const industries = [
     title: "Title / Auto Lenders",
     description:
       "Help teams manage bankruptcy matters involving secured vehicle collateral, notices, deadlines, documents, and internal workflows.",
+    href: "/industries/title-auto-lenders",
     items: [
       "Secured collateral workflow support",
       "Notice and docket event tracking",
@@ -34,6 +40,7 @@ const industries = [
     title: "Manufactured & Mobile Home Lenders",
     description:
       "Manage bankruptcy workflows for manufactured housing and mobile home lending operations.",
+    href: "/industries/manufactured-mobile-home-lenders",
     items: [
       "Case tracking for manufactured housing portfolios",
       "Document and notice organization",
@@ -42,20 +49,10 @@ const industries = [
     ],
   },
   {
-    title: "Credit Unions & Regional Lenders",
-    description:
-      "Give smaller and mid-sized lending teams a structured way to manage bankruptcy cases without replacing core systems.",
-    items: [
-      "Bankruptcy workflow structure",
-      "Internal team coordination",
-      "Management visibility",
-      "Dedicated case organization",
-    ],
-  },
-  {
     title: "Secured Creditors",
     description:
       "Organize case activity, collateral-related workflows, notices, deadlines, and internal accountability.",
+    href: "/industries/secured-creditors",
     items: [
       "Case activity tracking",
       "Deadline visibility",
@@ -64,20 +61,22 @@ const industries = [
     ],
   },
   {
-    title: "Creditor-Side Law Firms",
+    title: "Credit Unions & Regional Lenders",
     description:
-      "Help legal, servicing, and operational teams that support creditors coordinate case details, documents, task status, and reporting visibility.",
+      "Give smaller and mid-sized lending teams a structured way to manage bankruptcy cases without replacing core systems.",
+    href: "/industries/credit-unions-regional-lenders",
     items: [
-      "Case detail coordination",
-      "Document and deadline tracking",
-      "Client-facing reporting support",
-      "Workflow visibility",
+      "Bankruptcy workflow structure",
+      "Internal team coordination",
+      "Management visibility",
+      "Dedicated case organization",
     ],
   },
   {
     title: "Specialty Finance Companies",
     description:
       "Support portfolio-specific bankruptcy workflows with configurable case tracking and operational reporting.",
+    href: "/industries/specialty-finance-companies",
     items: [
       "Configurable workflow support",
       "Case and account organization",
@@ -86,9 +85,22 @@ const industries = [
     ],
   },
   {
+    title: "Creditor-Side Law Firms",
+    description:
+      "Help legal, servicing, and operational teams that support creditors coordinate case details, documents, task status, and reporting visibility.",
+    href: "/industries/creditor-side-law-firms",
+    items: [
+      "Case detail coordination",
+      "Document and deadline tracking",
+      "Client-facing reporting support",
+      "Workflow visibility",
+    ],
+  },
+  {
     title: "Other Creditor-Side Teams",
     description:
       "Adapt bankruptcy case management workflows around the needs of teams working on behalf of creditors.",
+    href: "/industries/other-creditor-side-teams",
     items: [
       "Flexible workflow structure",
       "Case and notice visibility",
@@ -97,23 +109,10 @@ const industries = [
     ],
   },
 ];
-/*
-  Industries page.
 
-  The homepage briefly identifies who Bankruptcy Control serves.
-  This page expands that message so visitors can quickly see whether their
-  organization type fits the platform's intended audience.
-*/
 export default function IndustriesPage() {
   return (
     <main className="bg-white text-slate-950">
-      {/* 
-        PAGE HERO
-
-        This section clearly establishes that Bankruptcy Control is for the
-        creditor side of bankruptcy operations, not debtor-side consumer filing
-        workflows.
-      */}
       <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
@@ -134,13 +133,6 @@ export default function IndustriesPage() {
               </p>
             </div>
 
-            {/* 
-              Audience clarification card.
-
-              This card helps prevent confusion by explaining that
-              Bankruptcy Control is not debtor-side software and is not meant
-              to replace every system an organization already uses.
-            */}
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 className="text-2xl font-semibold text-slate-950">
                 Focused on the creditor side
@@ -161,13 +153,6 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* 
-        INDUSTRY CARD GRID
-
-        These cards describe the most likely customer groups. The copy should
-        stay broad enough to avoid overpromising industry-specific features
-        until the owner confirms exact capabilities and target markets.
-      */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
@@ -188,39 +173,37 @@ export default function IndustriesPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {industries.map((industry) => (
-              <div
+              <Link
                 key={industry.title}
-                className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-blue-200 hover:shadow-md"
+                href={industry.href}
+                className="group block rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-400 hover:bg-slate-800 hover:shadow-xl"
               >
-                <h3 className="text-2xl font-semibold text-slate-950">
+                <h3 className="text-2xl font-semibold text-white">
                   {industry.title}
                 </h3>
 
-                <p className="mt-4 text-base leading-7 text-slate-600">
+                <p className="mt-4 text-base leading-7 text-slate-300">
                   {industry.description}
                 </p>
 
-                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-700">
+                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-300">
                   {industry.items.map((item) => (
                     <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-400" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+
+                <p className="mt-7 text-sm font-semibold text-blue-300 transition group-hover:translate-x-1 group-hover:text-blue-200">
+                  View details →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 
-        POSITIONING SECTION
-
-        This section reinforces that Bankruptcy Control is not only an alert
-        or monitoring tool. It helps manage the work that follows bankruptcy
-        activity detection.
-      */}
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -260,12 +243,6 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* 
-        FINAL CTA
-
-        Repeats the demo request path at the end of the page so visitors do not
-        need to scroll back to the top after reading the industry overview.
-      */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950">

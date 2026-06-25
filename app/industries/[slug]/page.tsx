@@ -182,7 +182,7 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
-  "title-auto-lenders": {
+    "title-auto-lenders": {
     eyebrow: "Title / Auto Lenders",
     title: "Bankruptcy workflow support for title and auto lending operations.",
     description:
@@ -223,8 +223,48 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
     ],
   },
-
-  "manufactured-mobile-home-lenders": {
+  "secured-creditors": {
+    eyebrow: "Secured Creditors",
+    title: "Bankruptcy workflow support for secured creditor operations.",
+    description:
+      "Bankruptcy Control helps secured creditors organize case activity, collateral-related workflows, notices, deadlines, documents, tasks, and internal reporting.",
+    sections: [
+      {
+        title: "Case Activity Tracking",
+        description:
+          "Track bankruptcy case activity tied to secured claims, accounts, collateral, and operational follow-up.",
+        items: [
+          "Case status visibility",
+          "Secured claim workflow support",
+          "Account and matter organization",
+          "Activity history",
+        ],
+      },
+      {
+        title: "Collateral-Related Workflows",
+        description:
+          "Support workflows involving collateral, notices, deadlines, documents, and case updates.",
+        items: [
+          "Collateral-related task tracking",
+          "Notice review support",
+          "Deadline visibility",
+          "Document organization",
+        ],
+      },
+      {
+        title: "Operational Accountability",
+        description:
+          "Help teams understand what needs follow-up, who owns the next step, and where each matter stands.",
+        items: [
+          "Task ownership",
+          "Workflow visibility",
+          "Management review support",
+          "Operational reporting",
+        ],
+      },
+    ],
+  },
+    "manufactured-mobile-home-lenders": {
     eyebrow: "Manufactured & Mobile Home Lenders",
     title:
       "Bankruptcy workflow support for manufactured and mobile home lending.",
@@ -266,7 +306,6 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
     ],
   },
-
   "credit-unions-regional-lenders": {
     eyebrow: "Credit Unions & Regional Lenders",
     title:

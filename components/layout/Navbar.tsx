@@ -130,6 +130,18 @@ const navGroups: NavGroup[] = [
             description:
               "Manage secured account issues, notices, and follow-up.",
           },
+          {
+            label: "Manufactured & Mobile Home Lenders",
+            href: "/industries/manufactured-mobile-home-lenders",
+            description:
+              "Track cases involving collateral, notices, and court activity.",
+          },
+          {
+            label: "Secured Creditors",
+            href: "/industries/secured-creditors",
+            description:
+              "Organize collateral-related case activity, notices, and deadlines.",
+          },
         ],
       },
       {
@@ -140,12 +152,6 @@ const navGroups: NavGroup[] = [
             href: "/industries/financial-organizations",
             description:
               "Review bankruptcy workflow support for financial organizations.",
-          },
-          {
-            label: "Manufactured & Mobile Home Lenders",
-            href: "/industries/manufactured-mobile-home-lenders",
-            description:
-              "Track cases involving collateral, notices, and court activity.",
           },
           {
             label: "Credit Unions & Regional Lenders",
