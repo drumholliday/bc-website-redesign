@@ -1,5 +1,5 @@
-// Main navigation links used by the desktop and mobile navbar.
-// Keeping these links in one file makes it easier to update navigation later.
+// Main navigation links used by layouts or fallback navigation.
+// The grouped desktop navbar may define its own dropdown structure in Navbar.tsx.
 export const mainNavigation = [
   {
     label: "Home",
@@ -10,46 +10,36 @@ export const mainNavigation = [
     href: "/platform",
   },
   {
-    label: "Industries",
+    label: "Solutions",
     href: "/industries",
   },
   {
-    label: "Integrations",
-    href: "/integrations",
+    label: "Resources",
+    href: "/resources",
   },
   {
-    label: "Security",
-    href: "/security",
-  },
-  {
-    label: "Deployment",
-    href: "/deployment",
-  },
-  {
-    label: "About",
+    label: "Company",
     href: "/about",
   },
 ];
 
-// Footer navigation is grouped by column so the Footer component
-// can stay clean and focus on layout instead of storing link data.
-//
-// For the current version, keep the footer sitemap focused on real,
-// top-level pages. Deeper feature and industry links can be added later
-// if dedicated detail pages are built.
+// Footer navigation is intentionally compact.
+// The main navbar handles deeper product, solution, and resource navigation.
 export const footerNavigation = {
   product: [
     { label: "Platform", href: "/platform" },
-    { label: "Industries", href: "/industries" },
-    { label: "Integrations", href: "/integrations" },
+    { label: "Solutions", href: "/industries" },
+    { label: "Resources", href: "/resources" },
+  ],
+  resources: [
     { label: "Security", href: "/security" },
     { label: "Deployment", href: "/deployment" },
+    { label: "Integrations", href: "/integrations" },
   ],
   company: [
     { label: "About", href: "/about" },
     { label: "Contact / Demo", href: "/contact" },
     { label: "Privacy", href: "/privacy" },
-    { label: "Terms", href: "/terms" },
-    { label: "Disclaimer", href: "/disclaimer" },
+    { label: "Terms & Disclaimer", href: "/terms" },
   ],
 };

@@ -45,7 +45,7 @@ export function Hero() {
             <Button href="/contact">Request a Private Demo</Button>
 
             <Button href="/platform" variant="secondary">
-              Explore Platform
+              View Platform Overview
             </Button>
           </div>
 

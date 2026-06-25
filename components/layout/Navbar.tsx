@@ -113,14 +113,20 @@ const navGroups: NavGroup[] = [
             description: "See who Bankruptcy Control is designed to support.",
           },
           {
+            label: "Lenders & Creditors Overview",
+            href: "/industries/lenders-creditors",
+            description:
+              "Review bankruptcy workflow support for lenders and creditor teams.",
+          },
+          {
             label: "Consumer & Installment Lenders",
-            href: "/industries",
+            href: "/industries/lenders-creditors",
             description:
               "Support high-volume account and bankruptcy workflows.",
           },
           {
             label: "Title / Auto Lenders",
-            href: "/industries",
+            href: "/industries/lenders-creditors",
             description:
               "Manage secured account issues, notices, and follow-up.",
           },
@@ -130,20 +136,26 @@ const navGroups: NavGroup[] = [
         title: "Financial Organizations",
         links: [
           {
+            label: "Financial Organizations Overview",
+            href: "/industries/financial-organizations",
+            description:
+              "Review bankruptcy workflow support for financial organizations.",
+          },
+          {
             label: "Manufactured & Mobile Home Lenders",
-            href: "/industries",
+            href: "/industries/financial-organizations",
             description:
               "Track cases involving collateral, notices, and court activity.",
           },
           {
             label: "Credit Unions & Regional Lenders",
-            href: "/industries",
+            href: "/industries/financial-organizations",
             description:
               "Support internal teams with clearer bankruptcy workflow control.",
           },
           {
             label: "Specialty Finance Companies",
-            href: "/industries",
+            href: "/industries/financial-organizations",
             description:
               "Handle specialized creditor workflows and reporting needs.",
           },
@@ -153,14 +165,20 @@ const navGroups: NavGroup[] = [
         title: "Supporting Firms",
         links: [
           {
+            label: "Supporting Firms Overview",
+            href: "/industries/supporting-firms",
+            description:
+              "Review workflow support for firms serving creditor-side operations.",
+          },
+          {
             label: "Creditor-Side Law Firms",
-            href: "/industries",
+            href: "/industries/supporting-firms",
             description:
               "Coordinate legal workflow, documents, deadlines, and client visibility.",
           },
           {
             label: "Other Creditor-Side Teams",
-            href: "/industries",
+            href: "/industries/supporting-firms",
             description:
               "Support organizations that manage creditor bankruptcy operations.",
           },
@@ -170,11 +188,17 @@ const navGroups: NavGroup[] = [
   },
   {
     label: "Resources",
-    href: "/security",
+    href: "/resources",
     sections: [
       {
         title: "Security & Trust",
         links: [
+          {
+            label: "Resources Overview",
+            href: "/resources",
+            description:
+              "Review security, deployment, and integration resources.",
+          },
           {
             label: "Security",
             href: "/security",
@@ -193,10 +217,10 @@ const navGroups: NavGroup[] = [
         title: "Deployment",
         links: [
           {
-            label: "Deployment Options",
+            label: "Deployment Overview",
             href: "/deployment",
             description:
-              "Compare hosted SaaS, dedicated cloud, and client-controlled models.",
+              "Review hosted deployment, rollout, and implementation planning.",
           },
           {
             label: "Implementation Planning",
@@ -267,6 +291,7 @@ const navGroups: NavGroup[] = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
 
   function handleHomeClick(event: MouseEvent<HTMLAnchorElement>) {
     if (pathname === "/") {
@@ -320,13 +345,20 @@ export function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden items-center gap-1 lg:flex">
           {navGroups.map((group) => {
-              const active = isGroupActive(group);
-              const isMegaMenu = group.sections.length >= 3;
+            const active = isGroupActive(group);
+            const isMegaMenu = group.sections.length >= 3;
+            const menuOpen = openGroup === group.label;
 
-              return (
-              <div key={group.label} className="group relative flex h-20 items-center">
+            return (
+              <div
+                key={group.label}
+                className="relative flex h-20 items-center"
+                onMouseEnter={() => setOpenGroup(group.label)}
+                onMouseLeave={() => setOpenGroup(null)}
+              >
                 <Link
                   href={group.href}
+                  onClick={() => setOpenGroup(null)}
                   className={cn(
                     "inline-flex cursor-pointer items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white",
                     active &&
@@ -338,15 +370,18 @@ export function Navbar() {
                     ▾
                   </span>
                 </Link>
-                    <div
-                      className={cn(
-                        "pointer-events-none z-50 translate-y-2 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100",
-                        isMegaMenu
-                          ? "fixed left-0 right-0 top-20"
-                          : "absolute right-0 top-full w-[32rem] max-w-[calc(100vw-3rem)]",
-                      )}
-                    >
-                 <div
+                <div
+                  className={cn(
+                    "z-50 pt-3 transition duration-200",
+                    menuOpen
+                      ? "pointer-events-auto translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-2 opacity-0",
+                    isMegaMenu
+                      ? "fixed left-0 right-0 top-20"
+                      : "absolute right-0 top-full w-[32rem] max-w-[calc(100vw-3rem)]",
+                  )}
+                >
+                  <div
                     className={cn(
                       "overflow-hidden border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900",
                       isMegaMenu ? "rounded-none border-x-0" : "rounded-3xl",
@@ -355,7 +390,9 @@ export function Navbar() {
                     <div
                       className={cn(
                         "grid gap-8 p-6",
-                        isMegaMenu ? "mx-auto max-w-7xl md:grid-cols-3" : "md:grid-cols-2",
+                        isMegaMenu
+                          ? "mx-auto max-w-7xl md:grid-cols-3"
+                          : "md:grid-cols-2",
                       )}
                     >
                       {group.sections.map((section) => (
@@ -369,6 +406,7 @@ export function Navbar() {
                               <Link
                                 key={`${section.title}-${link.label}`}
                                 href={link.href}
+                                onClick={() => setOpenGroup(null)}
                                 className="block cursor-pointer rounded-2xl px-3 py-2 transition hover:bg-slate-50 dark:hover:bg-slate-800"
                               >
                                 <span className="block text-sm font-semibold text-slate-950 dark:text-white">
@@ -443,7 +481,7 @@ export function Navbar() {
               <div className="mt-3 grid gap-4">
                 {group.sections.map((section) => (
                   <div key={section.title}>
-                    <p className="px-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">
+                    <p className="px-4 text-xs font-bold uppercase tracking-[0.18em] text-sky-300">
                       {section.title}
                     </p>
 
