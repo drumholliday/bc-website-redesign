@@ -180,44 +180,43 @@ const platformPages: Record<string, PlatformDetailPage> = {
       },
     ],
   },
-
-  "reports-exports": {
-    eyebrow: "Reports & Exports",
-    title: "Support reporting, review, and operational visibility.",
+  "reporting-audit-trails": {
+    eyebrow: "Reporting & Audit Trails",
+    title: "Reporting and audit trail visibility for bankruptcy operations.",
     description:
-      "Bankruptcy Control is intended to help teams create better visibility into bankruptcy operations, case status, workflow activity, and management review needs.",
+      "Bankruptcy Control helps teams create clearer visibility into case activity, workflow status, ownership, documents, deadlines, and operational history.",
     sections: [
       {
-        title: "Management Visibility",
+        title: "Operational Reporting",
         description:
-          "Give leadership and operations teams a clearer view of bankruptcy workflow activity.",
+          "Give managers and teams better visibility into bankruptcy workflow activity and case status.",
         items: [
-          "Case status reporting",
-          "Workflow summaries",
-          "Operational metrics",
-          "Exception review",
+          "Case status summaries",
+          "Open workflow visibility",
+          "Management review support",
+          "Portfolio activity insight",
         ],
       },
       {
-        title: "Client and Internal Review",
+        title: "Audit Trail Visibility",
         description:
-          "Support reporting needs for internal teams and creditor-side stakeholders.",
-        items: [
-          "Case summaries",
-          "Portfolio-level visibility",
-          "Activity review support",
-          "Reporting exports",
-        ],
-      },
-      {
-        title: "Audit Support",
-        description:
-          "Maintain structured information that can support review and accountability.",
+          "Support internal accountability by keeping important activity, ownership, and workflow history easier to review.",
         items: [
           "Activity history",
-          "Status change visibility",
-          "User action tracking",
-          "Operational records",
+          "Task ownership records",
+          "Document history",
+          "Workflow status changes",
+        ],
+      },
+      {
+        title: "Review and Export Support",
+        description:
+          "Support reporting, review, and operational handoff needs without making exports the main product message.",
+        items: [
+          "Internal review support",
+          "Client reporting support",
+          "Operational summaries",
+          "Structured data visibility",
         ],
       },
     ],
@@ -307,8 +306,8 @@ export default async function PlatformDetailPage({ params }: PageProps) {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            Review the broader platform to understand how cases, notices,
-            tasks, documents, reporting, security, and workflow visibility work
+            Review the broader platform to understand how cases, notices, tasks,
+            documents, reporting, security, and workflow visibility work
             together.
           </p>
 
