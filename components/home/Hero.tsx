@@ -44,7 +44,11 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button href="/contact">Request a Private Demo</Button>
 
-            <Button href="/platform" variant="secondary">
+            <Button
+              href="/platform"
+              variant="secondary"
+              className="border-white! bg-white! text-slate-950! hover: hover:text-slate-950!"
+            >
               View Platform Overview
             </Button>
           </div>
