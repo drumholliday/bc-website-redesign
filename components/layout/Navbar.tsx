@@ -42,9 +42,9 @@ const navLinks: NavLink[] = [
     activePaths: ["/platform"],
   },
   {
-    label: "Solutions",
-    href: "/industries",
-    activePaths: ["/industries"],
+  label: "Industries",
+  href: "/industries",
+  activePaths: ["/industries"],
   },
   {
     label: "Resources",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 
@@ -16,33 +17,46 @@ type IndustryDetailPage = {
   eyebrow: string;
   title: string;
   description: string;
+
+  // Optional overview section used on the 3 category pages.
+  // This displays as a paragraph section above the clickable cards.
+  overview?: {
+    title: string;
+    description: string;
+  };
+
   sections: Array<{
     title: string;
     description: string;
     items: string[];
+
+    // Optional link used only when a section should open a detail page.
+    href?: string;
   }>;
 };
 
 const industryPages: Record<string, IndustryDetailPage> = {
-  "lenders-creditors": {
+  /*
+    Category page:
+    /industries/lenders-creditors
+
+    This page shows the Lenders & Creditors overview plus the related
+    detailed industry cards.
+  */
+   "lenders-creditors": {
     eyebrow: "Lenders & Creditors",
     title: "Bankruptcy workflow support for lenders and creditor teams.",
     description:
       "Bankruptcy Control helps creditor-side organizations manage bankruptcy activity after detection, including notices, case status, tasks, documents, deadlines, and internal reporting.",
+    overview: {
+      title: "Lenders & Creditors Overview",
+      description:
+        "This category is for lenders and creditor teams that need better visibility into bankruptcy cases, notices, documents, deadlines, ownership, and operational follow-up. These organizations often need a dedicated bankruptcy workflow layer without replacing their existing servicing or portfolio systems.",
+    },
     sections: [
       {
-        title: "Industries Overview",
-        description:
-          "See how Bankruptcy Control supports organizations that need better structure around creditor-side bankruptcy operations.",
-        items: [
-          "Bankruptcy case visibility",
-          "Notice and activity tracking",
-          "Task ownership",
-          "Operational reporting",
-        ],
-      },
-      {
         title: "Consumer & Installment Lenders",
+        href: "/industries/consumer-installment-lenders",
         description:
           "Support high-volume account and bankruptcy workflows for consumer lending portfolios and servicing teams.",
         items: [
@@ -54,6 +68,7 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
       {
         title: "Title / Auto Lenders",
+        href: "/industries/title-auto-lenders",
         description:
           "Manage secured account issues, bankruptcy notices, documents, deadlines, and follow-up activity.",
         items: [
@@ -63,19 +78,11 @@ const industryPages: Record<string, IndustryDetailPage> = {
           "Case status organization",
         ],
       },
-    ],
-  },
-
-  "financial-organizations": {
-    eyebrow: "Financial Organizations",
-    title: "Structured bankruptcy workflows for financial organizations.",
-    description:
-      "Bankruptcy Control supports lenders and financial organizations that need clearer visibility, ownership, and reporting around creditor-side bankruptcy matters.",
-    sections: [
       {
         title: "Manufactured & Mobile Home Lenders",
+        href: "/industries/manufactured-mobile-home-lenders",
         description:
-          "Track cases involving collateral, notices, documents, court activity, and operational follow-up.",
+          "Track cases involving manufactured housing and mobile home collateral, notices, documents, court activity, and operational follow-up.",
         items: [
           "Case tracking for manufactured housing portfolios",
           "Document and notice organization",
@@ -84,7 +91,41 @@ const industryPages: Record<string, IndustryDetailPage> = {
         ],
       },
       {
+        title: "Secured Creditors",
+        href: "/industries/secured-creditors",
+        description:
+          "Organize case activity, collateral-related workflows, notices, deadlines, and internal accountability.",
+        items: [
+          "Case activity tracking",
+          "Deadline visibility",
+          "Document organization",
+          "Collateral-related workflow support",
+        ],
+      },
+    ],
+  },
+
+  /*
+    Category page:
+    /industries/financial-organizations
+
+    This page shows the Financial Organizations overview plus the related
+    detailed industry cards.
+  */
+  "financial-organizations": {
+    eyebrow: "Financial Organizations",
+    title: "Structured bankruptcy workflows for financial organizations.",
+    description:
+      "Bankruptcy Control supports financial organizations that need clearer visibility, ownership, and reporting around creditor-side bankruptcy matters.",
+    overview: {
+      title: "Financial Organizations Overview",
+      description:
+        "This category is for credit unions, regional lenders, specialty finance companies, and financial organizations that need a structured way to manage bankruptcy work across internal teams. Bankruptcy Control helps organize case activity, notices, documents, deadlines, reporting, and follow-up work from the creditor side.",
+    },
+    sections: [
+      {
         title: "Credit Unions & Regional Lenders",
+        href: "/industries/credit-unions-regional-lenders",
         description:
           "Support internal teams with clearer bankruptcy workflow control without replacing every existing system.",
         items: [
@@ -96,6 +137,7 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
       {
         title: "Specialty Finance Companies",
+        href: "/industries/specialty-finance-companies",
         description:
           "Handle specialized creditor workflows, configurable case tracking, and reporting needs.",
         items: [
@@ -108,14 +150,28 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
+  /*
+    Category page:
+    /industries/supporting-firms
+
+    This page shows the Supporting Firms overview plus the related
+    detailed industry cards.
+  */
   "supporting-firms": {
     eyebrow: "Supporting Firms",
-    title: "Workflow support for firms serving creditor-side bankruptcy operations.",
+    title:
+      "Workflow support for firms serving creditor-side bankruptcy operations.",
     description:
       "Bankruptcy Control helps creditor-side law firms and support teams coordinate case details, documents, deadlines, tasks, reporting, and client visibility.",
+    overview: {
+      title: "Supporting Firms Overview",
+      description:
+        "This category is for firms and support teams working on behalf of creditors. Bankruptcy Control helps organize creditor-side bankruptcy matters, coordinate documents and deadlines, support reporting visibility, and give teams a clearer workflow structure around each case.",
+    },
     sections: [
       {
         title: "Creditor-Side Law Firms",
+        href: "/industries/creditor-side-law-firms",
         description:
           "Coordinate legal workflow, documents, deadlines, reporting, and client visibility from one organized workspace.",
         items: [
@@ -127,6 +183,7 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
       {
         title: "Other Creditor-Side Teams",
+        href: "/industries/other-creditor-side-teams",
         description:
           "Support organizations working on behalf of creditors with structured bankruptcy workflow tools.",
         items: [
@@ -139,6 +196,10 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
+  /*
+    Detail page:
+    /industries/consumer-installment-lenders
+  */
   "consumer-installment-lenders": {
     eyebrow: "Consumer & Installment Lenders",
     title:
@@ -182,7 +243,11 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
-    "title-auto-lenders": {
+  /*
+    Detail page:
+    /industries/title-auto-lenders
+  */
+  "title-auto-lenders": {
     eyebrow: "Title / Auto Lenders",
     title: "Bankruptcy workflow support for title and auto lending operations.",
     description:
@@ -223,48 +288,12 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
     ],
   },
-  "secured-creditors": {
-    eyebrow: "Secured Creditors",
-    title: "Bankruptcy workflow support for secured creditor operations.",
-    description:
-      "Bankruptcy Control helps secured creditors organize case activity, collateral-related workflows, notices, deadlines, documents, tasks, and internal reporting.",
-    sections: [
-      {
-        title: "Case Activity Tracking",
-        description:
-          "Track bankruptcy case activity tied to secured claims, accounts, collateral, and operational follow-up.",
-        items: [
-          "Case status visibility",
-          "Secured claim workflow support",
-          "Account and matter organization",
-          "Activity history",
-        ],
-      },
-      {
-        title: "Collateral-Related Workflows",
-        description:
-          "Support workflows involving collateral, notices, deadlines, documents, and case updates.",
-        items: [
-          "Collateral-related task tracking",
-          "Notice review support",
-          "Deadline visibility",
-          "Document organization",
-        ],
-      },
-      {
-        title: "Operational Accountability",
-        description:
-          "Help teams understand what needs follow-up, who owns the next step, and where each matter stands.",
-        items: [
-          "Task ownership",
-          "Workflow visibility",
-          "Management review support",
-          "Operational reporting",
-        ],
-      },
-    ],
-  },
-    "manufactured-mobile-home-lenders": {
+
+  /*
+    Detail page:
+    /industries/manufactured-mobile-home-lenders
+  */
+  "manufactured-mobile-home-lenders": {
     eyebrow: "Manufactured & Mobile Home Lenders",
     title:
       "Bankruptcy workflow support for manufactured and mobile home lending.",
@@ -306,6 +335,57 @@ const industryPages: Record<string, IndustryDetailPage> = {
       },
     ],
   },
+
+  /*
+    Detail page:
+    /industries/secured-creditors
+  */
+  "secured-creditors": {
+    eyebrow: "Secured Creditors",
+    title: "Bankruptcy workflow support for secured creditor operations.",
+    description:
+      "Bankruptcy Control helps secured creditors organize case activity, collateral-related workflows, notices, deadlines, documents, tasks, and internal reporting.",
+    sections: [
+      {
+        title: "Case Activity Tracking",
+        description:
+          "Track bankruptcy case activity tied to secured claims, accounts, collateral, and operational follow-up.",
+        items: [
+          "Case status visibility",
+          "Secured claim workflow support",
+          "Account and matter organization",
+          "Activity history",
+        ],
+      },
+      {
+        title: "Collateral-Related Workflows",
+        description:
+          "Support workflows involving collateral, notices, deadlines, documents, and case updates.",
+        items: [
+          "Collateral-related task tracking",
+          "Notice review support",
+          "Deadline visibility",
+          "Document organization",
+        ],
+      },
+      {
+        title: "Operational Accountability",
+        description:
+          "Help teams understand what needs follow-up, who owns the next step, and where each matter stands.",
+        items: [
+          "Task ownership",
+          "Workflow visibility",
+          "Management review support",
+          "Operational reporting",
+        ],
+      },
+    ],
+  },
+
+  /*
+    Detail page:
+    /industries/credit-unions-regional-lenders
+  */
   "credit-unions-regional-lenders": {
     eyebrow: "Credit Unions & Regional Lenders",
     title:
@@ -349,6 +429,10 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
+  /*
+    Detail page:
+    /industries/specialty-finance-companies
+  */
   "specialty-finance-companies": {
     eyebrow: "Specialty Finance Companies",
     title: "Configurable bankruptcy workflows for specialty finance operations.",
@@ -391,6 +475,10 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
+  /*
+    Detail page:
+    /industries/creditor-side-law-firms
+  */
   "creditor-side-law-firms": {
     eyebrow: "Creditor-Side Law Firms",
     title: "Bankruptcy workflow support for creditor-side law firms.",
@@ -433,6 +521,10 @@ const industryPages: Record<string, IndustryDetailPage> = {
     ],
   },
 
+  /*
+    Detail page:
+    /industries/other-creditor-side-teams
+  */
   "other-creditor-side-teams": {
     eyebrow: "Other Creditor-Side Teams",
     title:
@@ -519,32 +611,107 @@ export default async function IndustryDetailPage({ params }: PageProps) {
         </div>
       </section>
 
+            {/* Overview paragraph and related cards */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
+          {/* Optional overview paragraph for category pages */}
+          {page.overview ? (
+            <div className="mb-12 max-w-3xl">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
+                Overview
+              </p>
+
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+                {page.overview.title}
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                {page.overview.description}
+              </p>
+            </div>
+          ) : null}
+
+          {/* Cards */}
           <div className="grid gap-6 lg:grid-cols-3">
-            {page.sections.map((section) => (
-              <div
-                key={section.title}
-                className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-blue-200 hover:shadow-md"
-              >
-                <h2 className="text-2xl font-semibold text-slate-950">
-                  {section.title}
-                </h2>
+            {page.sections.map((section) => {
+              /*
+                Cards with href are clickable industry cards.
+                They use the same dark clickable-card style used elsewhere.
+              */
+              const isClickable = Boolean(section.href);
 
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  {section.description}
-                </p>
+              const cardContent = (
+                <>
+                  <h2
+                    className={
+                      isClickable
+                        ? "text-2xl font-semibold text-white"
+                        : "text-2xl font-semibold text-slate-950"
+                    }
+                  >
+                    {section.title}
+                  </h2>
 
-                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-700">
-                  {section.items.map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                  <p
+                    className={
+                      isClickable
+                        ? "mt-4 text-base leading-7 text-slate-300"
+                        : "mt-4 text-base leading-7 text-slate-600"
+                    }
+                  >
+                    {section.description}
+                  </p>
+
+                  <ul
+                    className={
+                      isClickable
+                        ? "mt-6 space-y-3 text-base leading-7 text-slate-300"
+                        : "mt-6 space-y-3 text-base leading-7 text-slate-700"
+                    }
+                  >
+                    {section.items.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span
+                          className={
+                            isClickable
+                              ? "mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-400"
+                              : "mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"
+                          }
+                        />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {section.href ? (
+                    <p className="mt-7 text-sm font-semibold text-blue-300 transition group-hover:translate-x-1 group-hover:text-blue-200">
+                      View details →
+                    </p>
+                  ) : null}
+                </>
+              );
+
+              if (section.href) {
+                return (
+                  <Link
+                    key={section.title}
+                    href={section.href}
+                    className="group block rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-400 hover:bg-slate-800 hover:shadow-xl"
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div
+                  key={section.title}
+                  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-blue-200 hover:shadow-md"
+                >
+                  {cardContent}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
