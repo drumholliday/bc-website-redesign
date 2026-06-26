@@ -108,34 +108,34 @@ export default function ResourcesPage() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {resources.map((resource) => (
-              <Link
+                <Link
                 key={resource.title}
                 href={resource.href}
-                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-blue-200 hover:shadow-md"
-              >
-                <h3 className="text-2xl font-semibold text-slate-950 group-hover:text-blue-700">
-                  {resource.title}
+                className="group block rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-400 hover:bg-slate-800 hover:shadow-xl"
+                >
+                <h3 className="text-2xl font-semibold text-white">
+                    {resource.title}
                 </h3>
 
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  {resource.description}
+                <p className="mt-4 text-base leading-7 text-slate-300">
+                    {resource.description}
                 </p>
 
-                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-700">
-                  {resource.items.map((item) => (
+                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-300">
+                    {resource.items.map((item) => (
                     <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                      <span>{item}</span>
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-400" />
+                        <span>{item}</span>
                     </li>
-                  ))}
+                    ))}
                 </ul>
 
-                <p className="mt-7 text-sm font-semibold text-blue-700 group-hover:underline group-hover:underline-offset-4">
-                  View {resource.title} →
+                <p className="mt-7 text-sm font-semibold text-blue-300 transition group-hover:translate-x-1 group-hover:text-blue-200">
+                    View {resource.title} →
                 </p>
-              </Link>
-            ))}
-          </div>
+                </Link>
+                ))}
+            </div>
         </div>
       </section>
 

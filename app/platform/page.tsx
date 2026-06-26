@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 /*
@@ -7,49 +8,53 @@ import { Button } from "@/components/ui/Button";
   If we want to add, remove, or reorder platform capability cards later,
   we can update this array instead of rewriting the JSX layout.
 */
-const platformSections = [
+const platformOverviewCards = [
   {
     title: "Case Management",
     description:
-      "Centralize bankruptcy case details, parties, chapters, jurisdictions, important dates, claim information, and case status in one operational workspace.",
+      "Track bankruptcy cases, parties, status, ownership, and activity history in one organized workspace.",
+    href: "/platform/case-management",
     items: [
-      "Debtor and account tracking",
-      "Chapter and jurisdiction details",
-      "Important case dates",
-      "Claim and account information",
+      "Case status tracking",
+      "Party and account details",
+      "Ownership visibility",
+      "Activity history",
     ],
   },
   {
-    title: "Monitoring & Notice Workflows",
+    title: "Monitoring & Notice Workflow",
     description:
-      "Support bankruptcy monitoring activity, notice review, docket updates, and the workflow steps that follow when a case event occurs.",
+      "Turn bankruptcy activity, notices, and court events into organized workflows for review and follow-up.",
+    href: "/platform/monitoring-notices",
     items: [
-      "Bankruptcy activity monitoring",
-      "Notice intake and review",
-      "Docket and event tracking",
-      "Follow-up task assignment",
+      "Notice review support",
+      "Court activity organization",
+      "Workflow routing",
+      "Follow-up visibility",
     ],
   },
   {
     title: "Tasks, Deadlines & Accountability",
     description:
-      "Help teams understand who is responsible, what needs to happen next, and which deadlines or documents require attention.",
+      "Help teams manage assignments, due dates, follow-up work, and internal accountability.",
+    href: "/platform/tasks-deadlines",
     items: [
       "Task ownership",
-      "Deadline visibility",
-      "Workflow status tracking",
-      "Internal accountability",
+      "Deadline awareness",
+      "Follow-up tracking",
+      "Team accountability",
     ],
   },
   {
-    title: "Documents & Reporting",
+    title: "Documents & Audit Trails",
     description:
-      "Organize case documents, reporting needs, operational notes, and management visibility across bankruptcy workflows.",
+      "Organize case documents, generated files, activity history, reporting visibility, and operational audit trails.",
+    href: "/platform/reporting-audit-trails",
     items: [
-      "Document organization",
+      "Document history",
+      "Activity visibility",
       "Operational reporting",
-      "Management visibility",
-      "Case activity history",
+      "Audit trail support",
     ],
   },
 ];
@@ -149,37 +154,36 @@ export default function PlatformPage() {
             We are avoiding an overly dense four-column layout on this detail
             page because the descriptions matter.
           */}
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {platformSections.map((section) => (
-              <div
-                key={section.title}
-                className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:border-blue-200 hover:shadow-md"
-              >
-                <h3 className="text-2xl font-semibold text-slate-950">
-                  {section.title}
-                </h3>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {platformOverviewCards.map((card) => (
+                <Link
+                  key={card.title}
+                  href={card.href}
+                  className="group block rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-400 hover:bg-slate-800 hover:shadow-xl"
+                >
+                  <h3 className="text-2xl font-semibold text-white">
+                    {card.title}
+                  </h3>
 
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  {section.description}
-                </p>
+                  <p className="mt-4 text-base leading-7 text-slate-300">
+                    {card.description}
+                  </p>
 
-                {/* 
-                  Bullet list for each capability card.
+                  <ul className="mt-6 space-y-3 text-base leading-7 text-slate-300">
+                    {card.items.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-400" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                  The small blue dot keeps the list visually organized without
-                  using default browser bullets, which can look less polished.
-                */}
-                <ul className="mt-6 space-y-3 text-base leading-7 text-slate-700">
-                  {section.items.map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+                  <p className="mt-7 text-sm font-semibold text-blue-300 transition group-hover:translate-x-1 group-hover:text-blue-200">
+                    View details →
+                  </p>
+                </Link>
+              ))}
+            </div>
         </div>
       </section>
 
