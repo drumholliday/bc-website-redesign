@@ -19,12 +19,12 @@ export function Footer() {
           <div className="text-center">
             <h2 className="text-sm font-semibold text-sky-300">Contact</h2>
 
-            <a
-              href="/bankruptcy-control.vcf"
-              className="mt-3 inline-flex rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:border-blue-400 hover:bg-blue-400/15 hover:text-white"
-            >
-              Open vCard
-            </a>
+           <a
+            href="/bankruptcy-control.vcf"
+            className="mt-3 inline-flex rounded-full border border-slate-700 bg-slate-950! px-4 py-2 text-sm font-semibold text-white! transition-all duration-200 hover:border-blue-400 hover:bg-blue-400/15 hover:text-white!"
+          >
+            Open vCard
+          </a>
           </div>
 
           <div className="text-center md:text-right">
