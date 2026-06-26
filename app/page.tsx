@@ -97,7 +97,7 @@ export default function Home() {
               access, auditability, backup planning, and data-protection
               practices appropriate for bankruptcy operations. The platform can
               support client compliance efforts, but it does not replace each
-              client’s own legal, regulatory, and internal security obligations.
+              client's own legal, regulatory, and internal security obligations.
             </p>
           </div>
 
@@ -176,7 +176,11 @@ export default function Home() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Button href="/contact">Request a Demo</Button>
 
-            <Button href="/platform" variant="secondary">
+            <Button
+              href="/platform"
+              variant="secondary"
+              className="border-white! bg-white! text-slate-950! hover:bg-slate-100! hover:text-slate-950!"
+            >
               Explore Platform
             </Button>
           </div>
