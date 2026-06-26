@@ -386,7 +386,7 @@ export function Navbar() {
                       : "pointer-events-none translate-y-2 opacity-0",
                     isMegaMenu
                       ? "fixed left-0 right-0 top-20"
-                      : "absolute right-0 top-full w-[32rem] max-w-[calc(100vw-3rem)]",
+                      : "absolute right-0 top-full w-lg max-w-[calc(100vw-3rem)]",
                   )}
                 >
                   <div
@@ -451,7 +451,7 @@ export function Navbar() {
             aria-controls="mobile-navigation"
           >
             <span className="text-xl" aria-hidden="true">
-              ×
+              &times;
             </span>
           </button>
         ) : (
@@ -495,7 +495,7 @@ export function Navbar() {
               >
                 <span>{group.label}</span>
                 <span className="text-lg text-slate-500 dark:text-slate-300">
-                  {openMobileGroup === group.label ? "−" : "+"}
+                  {openMobileGroup === group.label ? "-" : "+"}
                 </span>
               </button>
 
