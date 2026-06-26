@@ -93,7 +93,7 @@ export default function DeploymentPage() {
         message practical: most buyers will likely care about a secure, managed,
         reliable platform before they care about custom infrastructure details.
       */}
-      <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+      <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             Deployment
@@ -219,7 +219,7 @@ export default function DeploymentPage() {
 
           <div className="mt-12 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[900px] border-collapse text-left">
+              <table className="w-full min-w-225 border-collapse text-left">
                 <thead className="bg-slate-950 text-white">
                   <tr>
                     <th className="px-6 py-5 text-base font-semibold">
@@ -317,7 +317,7 @@ export default function DeploymentPage() {
         hosting model depends on the client's real requirements.
       */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-4xl border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
             Review deployment options in a private demo.
           </h2>

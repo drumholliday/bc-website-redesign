@@ -3,6 +3,7 @@
   This uses fake operational data only — no real case numbers, client names,
   borrower information, court documents, SSNs, or sensitive data.
 */
+
 export function DashboardMockup() {
   const cases = [
     {
@@ -27,9 +28,9 @@ export function DashboardMockup() {
 
   return (
     <div className="relative">
-      <div className="absolute -inset-6 rounded-[2rem] bg-blue-500/10 blur-3xl" />
+      <div className="absolute -inset-6 rounded-4xl bg-blue-500/10 blur-3xl" />
 
-      <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30">
+      <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30">
         <div className="border-b border-slate-200 bg-slate-50 px-5 py-4 dark:border-slate-800 dark:bg-slate-950">
           <div className="flex items-center justify-between">
             <div>

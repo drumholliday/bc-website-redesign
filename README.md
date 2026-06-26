@@ -6,9 +6,7 @@ The site is designed to present Bankruptcy Control as a polished, credible, and 
 
 ## Preview Site
 
-<a href="https://bc-website-redesign.vercel.app/" target="_blank" rel="noopener noreferrer">
-  View the live Bankruptcy Control website
-</a>
+[View the live Bankruptcy Control website](https://bc-website-redesign.vercel.app/)
 
 ## Overview
 
@@ -312,8 +310,6 @@ The goal of this website is to make a qualified lender, creditor, credit union, 
 
 > This company understands creditor-side bankruptcy operations, the software looks credible, and it is worth requesting a private demo.
 
-## Preview Site
+## Preview of the Site
 
-<a href="https://bc-website-redesign.vercel.app/" target="_blank" rel="noopener noreferrer">
-  View the live Bankruptcy Control website
-</a>
+[View the live Bankruptcy Control website](https://bc-website-redesign.vercel.app/)

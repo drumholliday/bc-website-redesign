@@ -113,7 +113,7 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <main className="bg-white text-slate-950">
-      <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+      <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             Industries
@@ -244,14 +244,14 @@ export default function IndustriesPage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-4xl border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
             Discuss your bankruptcy workflow.
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
             Request a private demo using sanitized sample data to see how
-            Bankruptcy Control may support your organization’s creditor-side
+            Bankruptcy Control may support your organization's creditor-side
             bankruptcy operations.
           </p>
 

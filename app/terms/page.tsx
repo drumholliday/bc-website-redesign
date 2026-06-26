@@ -7,7 +7,7 @@
 export default function TermsPage() {
   return (
     <main className="bg-white text-slate-950">
-      <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+      <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-4xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             Terms
@@ -18,7 +18,7 @@ export default function TermsPage() {
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            This page is a placeholder for Bankruptcy Control’s Terms of Use.
+            This page is a placeholder for Bankruptcy Control's Terms of Use.
             Final terms should be reviewed before production launch.
           </p>
         </div>

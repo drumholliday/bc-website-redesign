@@ -40,7 +40,7 @@ export function CardCarousel({ items }: CardCarouselProps) {
     <div>
       <div
         ref={carouselRef}
-        className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pt-5 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pt-5 pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item) => (
           <div
@@ -57,13 +57,13 @@ export function CardCarousel({ items }: CardCarouselProps) {
       </div>
 
       <div className="mt-6 flex justify-center gap-3">
-        <button
+       <button
           type="button"
           onClick={() => scrollCards("left")}
           className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 text-xl font-semibold text-white transition hover:border-blue-400 hover:bg-blue-500/20"
           aria-label="Show previous cards"
         >
-          ‹
+          <span aria-hidden="true">&lsaquo;</span>
         </button>
 
         <button
@@ -72,7 +72,7 @@ export function CardCarousel({ items }: CardCarouselProps) {
           className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900 text-xl font-semibold text-white transition hover:border-blue-400 hover:bg-blue-500/20"
           aria-label="Show next cards"
         >
-          ›
+          <span aria-hidden="true">&rsaquo;</span>
         </button>
       </div>
     </div>

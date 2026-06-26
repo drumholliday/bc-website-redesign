@@ -11,9 +11,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-slate-950 px-6 pt-12 pb-16 text-white sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24">
       {/* Subtle background depth without motion or heavy effects. */}
-      <div className="absolute left-[-10rem] top-[-10rem] h-80 w-80 rounded-full bg-blue-600/25 blur-3xl" />
-      <div className="absolute bottom-[-12rem] right-[-8rem] h-96 w-96 rounded-full bg-sky-500/15 blur-3xl" />
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900" />
+      <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-blue-600/25 blur-3xl" />
+      <div className="absolute -bottom-48 -right-32 h-96 w-96 rounded-full bg-sky-500/15 blur-3xl" />
+      <div className="absolute inset-0 bg-linear-to-br from-slate-950 via-slate-950 to-slate-900" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
         <div>

@@ -21,10 +21,9 @@ export function Footer() {
 
             <a
               href="/bankruptcy-control.vcf"
-              download
               className="mt-3 inline-flex rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:border-blue-400 hover:bg-blue-400/15 hover:text-white"
             >
-              Download vCard
+              Open vCard
             </a>
           </div>
 

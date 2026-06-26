@@ -50,7 +50,7 @@ const resources = [
 export default function ResourcesPage() {
   return (
     <main className="bg-white text-slate-950">
-      <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+      <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             Resources
@@ -63,7 +63,7 @@ export default function ResourcesPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-                Learn more about the platform’s security approach, deployment
+                Learn more about the platform's security approach, deployment
                 planning, and integration direction for creditor-side bankruptcy
                 operations.
               </p>
@@ -178,7 +178,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-4xl border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
             Review Bankruptcy Control with your team.
           </h2>

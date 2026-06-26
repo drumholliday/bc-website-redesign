@@ -76,7 +76,7 @@ export default function PlatformPage() {
         position: Bankruptcy Control supports monitoring, but its bigger value
         is helping teams manage the operational work that follows.
       */}
-      <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+      <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
             Platform
@@ -245,7 +245,7 @@ export default function PlatformPage() {
         should submit sensitive borrower or court information through the site.
       */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-4xl border border-blue-200 bg-blue-50 p-8 text-center shadow-sm">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
             See Bankruptcy Control in a private demo.
           </h2>

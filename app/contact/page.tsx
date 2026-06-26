@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 */
 export default function ContactPage() {
   return (
-    <section className="bg-gradient-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
+    <section className="bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-blue-200 bg-blue-50 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
@@ -68,7 +68,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/10 sm:p-8">
+        <form className="rounded-4xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/10 sm:p-8">
           <div>
             <h2 className="text-2xl font-semibold text-slate-950">
               Demo request form
@@ -193,13 +193,12 @@ export default function ContactPage() {
               Submit Demo Request
             </button>
 
-            <a
-              href="/bankruptcy-control.vcf"
-              download
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-900 transition hover:border-blue-300 hover:bg-blue-50"
-            >
-              Download vCard
-            </a>
+           <a
+            href="/bankruptcy-control.vcf"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-900 transition hover:border-blue-300 hover:bg-blue-50"
+          >
+            Open vCard
+          </a>
           </div>
 
           <p className="mt-5 text-base leading-7 text-slate-500">
