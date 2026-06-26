@@ -298,6 +298,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
 
   function handleHomeClick(event: MouseEvent<HTMLAnchorElement>) {
     if (pathname === "/") {
@@ -307,6 +308,7 @@ export function Navbar() {
         behavior: "smooth",
       });
       setIsOpen(false);
+      setOpenMobileGroup(null);
     }
   }
 
@@ -440,7 +442,10 @@ export function Navbar() {
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 text-slate-950 transition hover:bg-slate-100 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800 lg:hidden"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              setOpenMobileGroup(null);
+            }}
             aria-label="Close navigation menu"
             aria-expanded="true"
             aria-controls="mobile-navigation"
@@ -473,45 +478,80 @@ export function Navbar() {
           isOpen ? "block" : "hidden",
         )}
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3">
           {navGroups.map((group) => (
-            <div key={group.label}>
-              <Link
-                href={group.href}
-                onClick={() => setIsOpen(false)}
-                className="block rounded-2xl bg-slate-50 px-4 py-3 text-base font-bold text-slate-950 dark:bg-slate-800 dark:text-white"
+            <div
+              key={group.label}
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900"
+            >
+             <button
+                type="button"
+                onClick={() =>
+                  setOpenMobileGroup((current) =>
+                    current === group.label ? null : group.label,
+                  )
+                }
+                className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-bold text-slate-950 transition hover:bg-slate-50 dark:text-white dark:hover:bg-slate-800"
               >
-                {group.label}
-              </Link>
+                <span>{group.label}</span>
+                <span className="text-lg text-slate-500 dark:text-slate-300">
+                  {openMobileGroup === group.label ? "−" : "+"}
+                </span>
+              </button>
 
-              <div className="mt-3 grid gap-4">
-                {group.sections.map((section) => (
-                  <div key={section.title}>
-                    <p className="px-4 text-xs font-bold uppercase tracking-[0.18em] text-sky-300">
-                      {section.title}
-                    </p>
+              {openMobileGroup === group.label && (
+                <div className="border-t border-slate-200 px-4 py-4 dark:border-slate-700">
+                  <Link
+                    href={group.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setOpenMobileGroup(null);
+                    }}
+                    className="mb-4 block rounded-xl bg-blue-50 px-3 py-2 text-sm font-bold text-blue-700 dark:bg-blue-400/10 dark:text-blue-200"
+                  >
+                    {group.label} Overview
+                  </Link>
 
-                    <div className="mt-2 grid gap-1">
-                      {section.links.map((link) => (
-                        <Link
-                          key={`${group.label}-${section.title}-${link.label}`}
-                          href={link.href}
-                          onClick={() => setIsOpen(false)}
-                          className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
+                  <div className="space-y-5">
+                    {group.sections.map((section) => (
+                      <div key={section.title}>
+                        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-sky-500 dark:text-sky-300">
+                          {section.title}
+                        </p>
+
+                        <div className="space-y-1">
+                          {section.links.map((link) => (
+                            <Link
+                              key={`${group.label}-${section.title}-${link.label}`}
+                              href={link.href}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setOpenMobileGroup(null);
+                              }}
+                              className="block rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-slate-950 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
           ))}
 
-          <div className="grid gap-3">
-            <Button href="/contact">Request a Demo</Button>
-          </div>
+          <Link
+            href="/contact"
+            onClick={() => {
+              setIsOpen(false);
+              setOpenMobileGroup(null);
+            }}
+            className="mt-2 block rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-500"
+          >
+            Request a Demo
+          </Link>
         </div>
       </div>
     </header>
