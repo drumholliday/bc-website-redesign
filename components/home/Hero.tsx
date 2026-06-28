@@ -26,11 +26,19 @@ export function Hero() {
             Bankruptcy Case Management Software for Creditor-Side Operations
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-            Bankruptcy monitoring tells you when something happened. Bankruptcy
-            Control helps creditors, lenders, and creditor-side firms manage
-            what happens next: cases, notices, documents, tasks, reporting, and
-            internal workflows in one secure platform.
+          <div className="mt-7 max-w-2xl rounded-3xl border border-white/10 bg-white/10 p-5 shadow-sm">
+            <p className="text-2xl font-semibold leading-9 text-white">
+              Bankruptcy monitoring tells you when something happened.
+            </p>
+
+            <p className="mt-3 text-2xl font-semibold leading-9 text-blue-300">
+              Bankruptcy Control helps you manage what happens next.
+            </p>
+          </div>
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Manage cases, notices, documents, tasks, deadlines, reporting, and
+            internal workflows in one secure creditor-side bankruptcy platform.
           </p>
 
           {/* Hero call-to-action buttons */}
